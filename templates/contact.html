@@ -1,5 +1,7 @@
 {% load static %}
 {% load i18n %}
+<link rel="stylesheet" type="text/css" href="{% static 'contact/contact.css' %}">
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -123,27 +125,41 @@
                 <div class="col-lg-7">
                     <div class="bg-primary h-100 p-5">
                         <form>
-                            <div class="row g-3">
-                                <div class="col-6">
-                                    <input type="text" class="form-control bg-light border-0 px-4" placeholder="Your Name" style="height: 55px;">
-                                </div>
-                                <div class="col-6">
-                                    <input type="email" class="form-control bg-light border-0 px-4" placeholder="Your Email" style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <input type="text" class="form-control bg-light border-0 px-4" placeholder="Subject" style="height: 55px;">
-                                </div>
-                                <div class="col-12">
-                                    <textarea class="form-control bg-light border-0 px-4 py-3" rows="2" placeholder="Message"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-secondary w-100 py-3" type="submit">Send Message</button>
-                                </div>
-                            </div>
+                            <form action="" method="post">
+                                <input type="hidden" name="csrfmiddlewaretoken"
+                                    value="yTF5g7ceTgkwsOimKxZpuV10DG4a1TWFwQ60pneu047lPvu6kTAlNYPfYEC9G8jq">
+                                <tr>
+                                    <!-- <th>
+                                        <label for="id_email">Email:</label>
+                                    </th> -->
+                                    <td>
+                                        <input type="email" name="email" maxlength="254" placeholder="Email" required id="id_email">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- <th>
+                                        <label for="id_subject">Subject:</label>
+                                    </th> -->
+                                    <td>
+                                        <input type="text" name="subject" maxlength="255" placeholder="Subject" required id="id_subject">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <!-- <th>
+                                        <label for="id_message">Message:</label>
+                                    </th> -->
+                                    <td>
+                                        <textarea name="message" cols="40" rows="10" placeholder="Message" required id="id_message"></textarea>
+                                    </td>
+                                </tr>
+                                <input type="submit" class="btn btn-secondary w-100 py-3" value="Submit">
+                            </form>
+
                         </form>
                     </div>
                 </div>
                 <div class="col-lg-5">
+                    {%for item in AboutUs%}
                     <div class="bg-secondary h-100 p-5">
                         <h2 class="text-white mb-4">Get In Touch</h2>
                         <div class="d-flex mb-4">
@@ -152,7 +168,7 @@
                             </div>
                             <div class="ps-3">
                                 <h5 class="text-white">Our Office</h5>
-                                <span class="text-white">123 Street, New York, USA</span>
+                                <span class="text-white">{{item.adress}}</span>
                             </div>
                         </div>
                         <div class="d-flex mb-4">
@@ -161,7 +177,7 @@
                             </div>
                             <div class="ps-3">
                                 <h5 class="text-white">Email Us</h5>
-                                <span class="text-white">info@example.com</span>
+                                <span class="text-white">{{item.email}}</span>
                             </div>
                         </div>
                         <div class="d-flex">
@@ -170,10 +186,11 @@
                             </div>
                             <div class="ps-3">
                                 <h5 class="text-white">Call Us</h5>
-                                <span class="text-white">+012 345 6789</span>
+                                <span class="text-white">{{item.phone_number}}</span>
                             </div>
                         </div>
                     </div>
+                    {%endfor%}
                 </div>
             </div>
         </div>

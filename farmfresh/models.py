@@ -109,3 +109,22 @@ class Service(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Contact(models.Model):
+    email = models.EmailField()
+    subject = models.CharField(max_length=255)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.email
+
+
+class AboutUs(models.Model):
+    adress = models.CharField(max_length=255)
+    email = models.EmailField()
+    phone_number = models.IntegerField()
+    city = models.ForeignKey(City, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.adress
