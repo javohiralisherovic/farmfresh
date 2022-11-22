@@ -1,0 +1,437 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-21 15:45+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: farm/settings.py:120
+#, fuzzy
+#| msgid "Uzbekistan"
+msgid "Uzbek"
+msgstr "ozbekcha"
+
+#: farm/settings.py:121
+msgid "English"
+msgstr "inglizcha"
+
+#: farmfresh/forms.py:5
+msgid "first name"
+msgstr "Ims"
+
+#: templates/about.html:8 templates/index.html:9
+msgid "FarmFresh - Organic Farm Website Template"
+msgstr "xo'jalik yangi"
+
+#: templates/about.html:47 templates/about.html:71 templates/blog.html:47
+#: templates/blog.html:71 templates/contact.html:47 templates/contact.html:71
+#: templates/detail.html:47 templates/detail.html:71 templates/feature.html:47
+#: templates/feature.html:71 templates/index.html:48 templates/index.html:94
+#: templates/product.html:47 templates/product.html:71
+#: templates/product_view.html:48 templates/product_view.html:72
+#: templates/service.html:47 templates/service.html:71 templates/team.html:47
+#: templates/team.html:71 templates/testimonial.html:47
+#: templates/testimonial.html:71
+msgid "Farm"
+msgstr "Ferma"
+
+#: templates/about.html:47 templates/about.html:71 templates/blog.html:47
+#: templates/blog.html:71 templates/contact.html:47 templates/contact.html:71
+#: templates/detail.html:47 templates/detail.html:71 templates/feature.html:47
+#: templates/feature.html:71 templates/index.html:48 templates/index.html:94
+#: templates/product.html:47 templates/product.html:71
+#: templates/product_view.html:48 templates/product_view.html:72
+#: templates/service.html:47 templates/service.html:71 templates/team.html:47
+#: templates/team.html:71 templates/testimonial.html:47
+#: templates/testimonial.html:71
+msgid "Fresh"
+msgstr "Yangi"
+
+#: templates/about.html:79 templates/about.html:106 templates/about.html:287
+#: templates/about.html:304 templates/blog.html:79 templates/blog.html:106
+#: templates/blog.html:265 templates/blog.html:282 templates/contact.html:79
+#: templates/detail.html:79 templates/detail.html:106 templates/feature.html:79
+#: templates/feature.html:230 templates/feature.html:247
+#: templates/index.html:101 templates/index.html:472 templates/index.html:483
+#: templates/product.html:79 templates/product.html:243
+#: templates/product.html:260 templates/product_view.html:80
+#: templates/product_view.html:314 templates/product_view.html:331
+#: templates/service.html:79 templates/service.html:201
+#: templates/service.html:218 templates/team.html:79 templates/team.html:193
+#: templates/team.html:210 templates/testimonial.html:79
+#: templates/testimonial.html:173 templates/testimonial.html:190
+msgid "Home"
+msgstr "Asosy"
+
+#: templates/about.html:80 templates/blog.html:80 templates/contact.html:80
+#: templates/detail.html:80 templates/feature.html:80 templates/index.html:102
+#: templates/product.html:80 templates/product_view.html:81
+#: templates/service.html:80 templates/team.html:80
+#: templates/testimonial.html:80
+msgid "About"
+msgstr "Biz haqimizda"
+
+#: templates/about.html:81 templates/blog.html:81 templates/contact.html:81
+#: templates/detail.html:81 templates/feature.html:81 templates/index.html:103
+#: templates/product.html:81 templates/product_view.html:82
+#: templates/service.html:81 templates/team.html:81
+#: templates/testimonial.html:81
+msgid "Service"
+msgstr "Xizmat"
+
+#: templates/about.html:82 templates/blog.html:82 templates/contact.html:82
+#: templates/detail.html:82 templates/feature.html:82 templates/index.html:104
+#: templates/product.html:82 templates/product_view.html:83
+#: templates/service.html:82 templates/team.html:82
+#: templates/testimonial.html:82
+msgid "Product"
+msgstr "Maxsulot"
+
+#: templates/about.html:86 templates/blog.html:86 templates/blog.html:105
+#: templates/blog.html:107 templates/contact.html:86 templates/detail.html:86
+#: templates/detail.html:105 templates/detail.html:107
+#: templates/feature.html:86 templates/index.html:108 templates/product.html:86
+#: templates/product_view.html:87 templates/service.html:86
+#: templates/team.html:86 templates/testimonial.html:86
+msgid "Blog Grid"
+msgstr "Sahifa"
+
+#: templates/about.html:87 templates/blog.html:87 templates/contact.html:87
+#: templates/detail.html:87 templates/feature.html:87 templates/index.html:109
+#: templates/product.html:87 templates/product_view.html:88
+#: templates/service.html:87 templates/team.html:87
+#: templates/testimonial.html:87
+msgid "Blog Detail"
+msgstr "Sahifa tafsilot"
+
+#: templates/about.html:88 templates/blog.html:88 templates/contact.html:88
+#: templates/detail.html:88 templates/feature.html:88 templates/index.html:110
+#: templates/index.html:307 templates/product.html:88
+#: templates/product_view.html:89 templates/service.html:88
+#: templates/team.html:88 templates/testimonial.html:88
+msgid "Features"
+msgstr "Xususiyatlar"
+
+#: templates/about.html:89 templates/about.html:213 templates/blog.html:89
+#: templates/contact.html:89 templates/detail.html:89 templates/feature.html:89
+#: templates/index.html:111 templates/index.html:383 templates/product.html:89
+#: templates/product_view.html:90 templates/service.html:89
+#: templates/team.html:89 templates/team.html:119 templates/testimonial.html:89
+msgid "The Team"
+msgstr "Jamoa"
+
+#: templates/about.html:90 templates/blog.html:90 templates/contact.html:90
+#: templates/detail.html:90 templates/feature.html:90 templates/index.html:112
+#: templates/product.html:90 templates/product_view.html:91
+#: templates/service.html:90 templates/team.html:90
+#: templates/testimonial.html:90
+msgid "Testimonial"
+msgstr "Guvoh"
+
+#: templates/about.html:93 templates/blog.html:93 templates/contact.html:93
+#: templates/detail.html:93 templates/feature.html:93 templates/index.html:115
+#: templates/index.html:133 templates/index.html:144 templates/product.html:93
+#: templates/product_view.html:94 templates/service.html:93
+#: templates/team.html:93 templates/testimonial.html:93
+msgid "Contact"
+msgstr "Aloqa"
+
+#: templates/about.html:105 templates/about.html:107 templates/about.html:126
+#: templates/about.html:289 templates/about.html:306 templates/blog.html:267
+#: templates/blog.html:284 templates/feature.html:232
+#: templates/feature.html:249 templates/index.html:199 templates/index.html:473
+#: templates/index.html:484 templates/product.html:245
+#: templates/product.html:262 templates/product_view.html:316
+#: templates/product_view.html:333 templates/service.html:203
+#: templates/service.html:220 templates/team.html:195 templates/team.html:212
+#: templates/testimonial.html:175 templates/testimonial.html:192
+msgid "About Us"
+msgstr "Biz haqimizda"
+
+#: templates/about.html:127 templates/index.html:200
+msgid "We Produce Organic Food For Your Family"
+msgstr "Biz sizning oilangiz uchun Organik mevalar ishlab chiqaramiz"
+
+#: templates/about.html:135 templates/index.html:206
+#, python-format
+msgid "100%% Organic"
+msgstr "100%% Organik"
+
+#: templates/about.html:136 templates/about.html:141 templates/index.html:207
+#: templates/index.html:212
+msgid "It is true that with labor it is a great pain, a great pain"
+msgstr "To‘g‘ri, tug‘ish bilan bu katta dard, katta azob"
+
+#: templates/about.html:140 templates/index.html:211
+msgid "Award Winning"
+msgstr "Mukofot Sovrindir"
+
+#: templates/about.html:162 templates/index.html:232
+msgid "Our Experience"
+msgstr "Tajribamiz"
+
+#: templates/about.html:174 templates/index.html:243
+msgid "Farm Specialist"
+msgstr "Mutaxassis"
+
+#: templates/about.html:186 templates/index.html:254
+msgid "Complete Project"
+msgstr "To'liq loyiha"
+
+#: templates/about.html:198 templates/index.html:265
+msgid "Happy Clients"
+msgstr "Xursand Mijozlar"
+
+#: templates/about.html:214 templates/index.html:384 templates/team.html:120
+msgid "We Are Professional Organic Farmers"
+msgstr "Biz Professional organik fermerlarmiz"
+
+#: templates/about.html:259 templates/blog.html:237 templates/feature.html:202
+#: templates/index.html:449 templates/product.html:215
+#: templates/product_view.html:286 templates/service.html:173
+#: templates/team.html:165 templates/testimonial.html:145
+msgid "Get In Touch"
+msgstr "Aloqa qiling"
+
+#: templates/about.html:291 templates/about.html:308 templates/blog.html:269
+#: templates/blog.html:286 templates/feature.html:234
+#: templates/feature.html:251 templates/index.html:474 templates/index.html:485
+#: templates/product.html:247 templates/product.html:264
+#: templates/product_view.html:318 templates/product_view.html:335
+#: templates/service.html:205 templates/service.html:222
+#: templates/team.html:197 templates/team.html:214
+#: templates/testimonial.html:177 templates/testimonial.html:194
+msgid "Our Services"
+msgstr "Xizmatlar"
+
+#: templates/about.html:293 templates/blog.html:271 templates/feature.html:236
+#: templates/index.html:475 templates/product.html:249
+#: templates/product_view.html:320 templates/service.html:207
+#: templates/team.html:199 templates/testimonial.html:179
+msgid "Meet the Team"
+msgstr "Jamoani ko'rish"
+
+#: templates/about.html:295 templates/blog.html:273 templates/feature.html:238
+#: templates/index.html:476 templates/product.html:251
+#: templates/product_view.html:322 templates/service.html:209
+#: templates/team.html:201 templates/testimonial.html:181
+msgid "Latest BLog"
+msgstr "So'nggi sahifa"
+
+#: templates/about.html:297 templates/about.html:314 templates/blog.html:275
+#: templates/blog.html:292 templates/contact.html:119
+#: templates/feature.html:126 templates/feature.html:240
+#: templates/feature.html:257 templates/index.html:286 templates/index.html:477
+#: templates/index.html:488 templates/product.html:253
+#: templates/product.html:270 templates/product_view.html:324
+#: templates/product_view.html:341 templates/service.html:126
+#: templates/service.html:211 templates/service.html:228
+#: templates/team.html:203 templates/team.html:220
+#: templates/testimonial.html:183 templates/testimonial.html:200
+msgid "Contact Us"
+msgstr "Aloqa"
+
+#: templates/about.html:301 templates/blog.html:279 templates/feature.html:244
+#: templates/index.html:481 templates/product.html:257
+#: templates/product_view.html:328 templates/service.html:215
+#: templates/team.html:207 templates/testimonial.html:187
+msgid "Popular Links"
+msgstr "mashhur havolalar"
+
+#: templates/about.html:310 templates/blog.html:288 templates/feature.html:253
+#: templates/index.html:486 templates/product.html:266
+#: templates/product_view.html:337 templates/service.html:224
+#: templates/team.html:216 templates/testimonial.html:196
+msgid "Meet The Team"
+msgstr "Jamoani ko'rish"
+
+#: templates/about.html:312 templates/blog.html:290 templates/feature.html:255
+#: templates/index.html:487 templates/product.html:268
+#: templates/product_view.html:339 templates/service.html:226
+#: templates/team.html:218 templates/testimonial.html:198
+msgid "Latest Blog"
+msgstr "So'nggi sahifa"
+
+#: templates/about.html:322 templates/blog.html:300 templates/feature.html:265
+#: templates/index.html:495 templates/product.html:278
+#: templates/product_view.html:349 templates/service.html:236
+#: templates/team.html:228 templates/testimonial.html:208
+msgid "Newsletter"
+msgstr "Yangiliklar"
+
+#: templates/about.html:323 templates/blog.html:301 templates/feature.html:266
+#: templates/index.html:496 templates/product.html:279
+#: templates/product_view.html:350 templates/service.html:237
+#: templates/team.html:229 templates/testimonial.html:209
+msgid "Subscribe Our Newsletter"
+msgstr "Yangiliklarga obuna bo'lish"
+
+#: templates/about.html:324 templates/blog.html:302 templates/feature.html:267
+#: templates/index.html:497 templates/product.html:280
+#: templates/product_view.html:351 templates/service.html:238
+#: templates/team.html:230 templates/testimonial.html:210
+msgid "Amet justo diam dolor rebum lorem sit stet sea justo kasd"
+msgstr "Amet justo diam dolor rebum lorem sit stet sea justo kasd"
+
+#: templates/about.html:328 templates/blog.html:306 templates/feature.html:271
+#: templates/index.html:501 templates/product.html:284
+#: templates/product_view.html:355 templates/service.html:242
+#: templates/team.html:234 templates/testimonial.html:214
+msgid "Sign Up"
+msgstr "Obuna bo'lish"
+
+#: templates/about.html:338 templates/blog.html:316 templates/feature.html:281
+#: templates/index.html:511 templates/product.html:294
+#: templates/product_view.html:365 templates/service.html:252
+#: templates/team.html:244 templates/testimonial.html:224
+msgid "Your Site Name"
+msgstr "Saytingiz"
+
+#: templates/about.html:338 templates/blog.html:316 templates/feature.html:281
+#: templates/index.html:511
+msgid ".All Rights Reserved. Designed by"
+msgstr ".Barcha huquqlar himoyalangan. tomonidan ishlab chiqilgan"
+
+#: templates/contact.html:120
+msgid "Please Feel Free To Contact Us"
+msgstr "Bizga murojaat qilishda erkin bo'ling"
+
+#: templates/feature.html:121 templates/index.html:282
+#: templates/service.html:121
+msgid "Services"
+msgstr "Xizmatlar"
+
+#: templates/feature.html:122 templates/index.html:283
+#: templates/service.html:122
+msgid "Organic Farm Services"
+msgstr "Organik firma Xizmatlar"
+
+#: templates/index.html:106
+msgid "Pages"
+msgstr "Sahifa"
+
+#: templates/index.html:130
+msgid "Oraganic Vegetables"
+msgstr "Organic Sabzavotlar"
+
+#: templates/index.html:131
+msgid "Organic Vegetables For Healthy Life"
+msgstr "Sog'lom hayot uchun organik sabzavotlar"
+
+#: templates/index.html:132 templates/index.html:143
+msgid "Explore"
+msgstr "Kashfiyot"
+
+#: templates/index.html:141 templates/index.html:177
+msgid "Organic Fruits"
+msgstr "Organik mevalar"
+
+#: templates/index.html:142
+msgid "Organic Fruits For Better Health"
+msgstr "Yaxshiroq sog'liq uchun organik mevalar"
+
+#: templates/index.html:152
+msgid "Previous"
+msgstr "oldingi"
+
+#: templates/index.html:157
+msgid "Next"
+msgstr "Keyingi"
+
+#: templates/index.html:170
+msgid "Organic Vegetables"
+msgstr "Organik Sabzavotlar"
+
+#: templates/index.html:171 templates/index.html:178
+msgid ""
+"The pain was very great, and the pain was great, and the pain was just the "
+"pain, not the two, but the pain, the pain"
+msgstr ""
+"Og'riq juda zo'r edi va og'riq juda katta og'riq edi, ikki emas, balki "
+"og'riq, og'riq"
+
+#: templates/index.html:172 templates/index.html:179
+msgid "Read More"
+msgstr "Koproq"
+
+#: templates/index.html:202
+#, fuzzy
+#| msgid ""
+#| "It was a time of elitr at rebum at at clita. May the pain be long and "
+#| "long. Clita was the very thing, and the truth was, but it was hard work"
+msgid ""
+"It was a time of elitr at rebum at at clita. May the pain be long and long. "
+"Clita was the very thing, but it was not a work. Saint Clita was in great "
+"pain for just two days and for a long time"
+msgstr ""
+"Bu klitada elitr at rebum vaqti edi. Og'riq uzoq va uzoq bo'lsin. Klita o'zi "
+"edi, lekin bu ish emas edi. Avliyo Klita bor-yo'g'i ikki kun va uzoq vaqt "
+"og'ir azob chekdiBu elitr at rebum at clita. Dard uzoq va uzoq bo'lsin. "
+"Klitaning o'zi edi va haqiqat edi, lekin bu qiyin ish edi"
+
+#: templates/index.html:285
+msgid ""
+"It was a time of elitr at rebum at at clita. May the pain be long and long. "
+"Clita was the very thing, and the truth was, but it was hard work"
+msgstr ""
+"Bu elitr at rebum at clita. Dard uzoq va uzoq bo'lsin. Klitaning o'zi edi va "
+"haqiqat edi, lekin bu qiyin ish edi"
+
+#: templates/index.html:308
+msgid "Why Choose Us!!!"
+msgstr "Nega aynan Biz"
+
+#: templates/index.html:334 templates/product.html:133
+msgid "Products"
+msgstr "Mahsulotlar"
+
+#: templates/index.html:335 templates/product.html:134
+msgid "Our Fresh & Organic Products"
+msgstr "Bizning yangi va organik Mahsulotlar"
+
+#: templates/index.html:420
+msgid "Our Blog"
+msgstr "Bizning Sahifa"
+
+#: templates/index.html:421
+msgid "Latest Articles From Our Blog Post"
+msgstr "Bizning blog postimizdagi so'nggi maqolalar"
+
+#: templates/product_view.html:166
+msgid "Add to Cart"
+msgstr "Karta qo'shish"
+
+#~ msgid "It was a great job to work hard"
+#~ msgstr "Qattiq mehnat qilish ajoyib ish edi"
+
+#~ msgid ""
+#~ "At and just elitr amet sea at It is true that it is great, but it is the "
+#~ "same and the pains of the rebuke. May the pain be great for them. Clita "
+#~ "is the subject of great pain. The pain was a great pain, but the pain was "
+#~ "great "
+#~ msgstr ""
+#~ "At va faqat elitr amet sea at Bu juda zo'r, lekin u bir xil va tanbeh "
+#~ "og'riqlari. Dard ularga zo'r bo'lsin. Klita katta dard mavzusi. Dard "
+#~ "katta azob edi. , lekin og'riq juda katta edi "
+
+#~ msgid "Modern Farming"
+#~ msgstr "Zamonaviy Firma"
+
+#~ msgid "It was a great job to work hard "
+#~ msgstr "Qattiq mehnat qilish ajoyib ish edi"
+
+#~ msgid "24/7 Support"
+#~ msgstr "24/7 qo'llab-quvvatlash"
