@@ -73,7 +73,7 @@ class ServiceAdmin(TranslationAdmin):
 # admin.site.register(Customer)
 # admin.site.register(Farmer)
 # admin.site.register(Product)
-# admin.site.register(Category)
+admin.site.register(Fact)
 admin.site.register(AboutUs)
 admin.site.register(Contact)
 admin.site.register(Payment)

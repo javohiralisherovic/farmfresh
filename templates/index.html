@@ -225,45 +225,15 @@
             <div class="row gx-5 gy-4">
                 <div class="col-lg-3 col-md-6">
                     <div class="d-flex">
-                        <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                        <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                            style="width: 60px; height: 60px;">
                             <i class="fa fa-star fs-4 text-white"></i>
                         </div>
                         <div class="ps-4">
-                            <h5 class="text-white">{% trans "Our Experience" %}</h5>
-                            <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="d-flex">
-                        <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                            <i class="fa fa-users fs-4 text-white"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="text-white">{% trans "Farm Specialist" %}</h5>
-                            <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="d-flex">
-                        <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                            <i class="fa fa-check fs-4 text-white"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="text-white">{% trans "Complete Project" %}</h5>
-                            <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="d-flex">
-                        <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                            <i class="fa fa-mug-hot fs-4 text-white"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h5 class="text-white">{% trans "Happy Clients" %}</h5>
-                            <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
+                            {%for fact in Fact%}
+                            <h5 class="text-white">{{fact.name}}</h5>
+                            <h1 class="display-5 text-white mb-0" data-toggle="counter-up">{{fact.number}}</h1>
+                            {%endfor%}
                         </div>
                     </div>
                 </div>

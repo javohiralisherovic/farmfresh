@@ -129,3 +129,12 @@ class AboutUs(models.Model):
 
     def __str__(self):
         return self.adress
+
+
+class Fact(models.Model):
+    name = models.CharField(max_length=255)
+    number = models.IntegerField()
+
+
+    def __str__(self):
+        return self.name

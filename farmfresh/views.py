@@ -17,8 +17,9 @@ def infex(request):
     featuredisplay = Feature.objects.all()
     servicedisplay = Service.objects.all()
     aboutdisplay = AboutUs.objects.all()
+    factdisplay = Fact.objects.all()
     context = {"Product":productsdisplay, "Farmer":farmersdisplay, "Service":servicedisplay,
-     "Customer":customersdisplay, "Post":postsdisplay, "Feature":featuredisplay, 'AboutUs': aboutdisplay}
+     "Customer":customersdisplay, "Post":postsdisplay, "Feature":featuredisplay, 'AboutUs': aboutdisplay, 'Fact':factdisplay}
     # print (context)
 
     def get_queryset(self):
@@ -99,7 +100,8 @@ class ProductView(ListView):
 def about(request):
     farmersdisplay = Farmer.objects.all()
     aboutdisplay = AboutUs.objects.all()
-    context = {"Farmer":farmersdisplay, 'AboutUs': aboutdisplay}
+    factdisplay = Fact.objects.all()
+    context = {"Farmer":farmersdisplay, 'AboutUs': aboutdisplay, 'Fact':factdisplay}
     return render(request, 'about.html', context)
 
 
@@ -114,7 +116,8 @@ def blog(request):
 def feature(request):
     servicedisplay = Service.objects.all()
     aboutdisplay = AboutUs.objects.all()
-    context = {"Service":servicedisplay, 'AboutUs': aboutdisplay}
+    featuredisplay = Feature.objects.all()
+    context = {"Service":servicedisplay, 'AboutUs': aboutdisplay, "Feature":featuredisplay}
     return render(request, 'feature.html', context)
 
 

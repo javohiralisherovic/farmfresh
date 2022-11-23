@@ -129,48 +129,6 @@
                     {%endfor%}
                 </div>
                 <!-- Blog Detail End -->
-
-                <!-- Comment List Start -->
-                <div class="mb-5">
-                    <h2 class="mb-4">Comments</h2>
-                    <div class="d-flex mb-4">
-                        {%for item in Customer%}
-                        <img src="{{item.image.url}}" class="img-fluid" style="width: 45px; height: 45px;">
-                        <div class="ps-3">
-                            <h6><a href="">{{item.first_name}} {{item.last_name}}</a> <small><i>01 Jan 2045</i></small></h6>
-                            <p>{{item.comment}}</p>
-                            <button class="btn btn-sm btn-primary">Reply</button>
-                        </div>
-                        {%endfor%}
-                    </div>
-                    
-                </div>
-                <!-- Comment List End -->
-
-                <!-- Comment Form Start -->
-                <div class="bg-primary p-5">
-                    <h2 class="text-white mb-4">Leave a comment</h2>
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control bg-white border-0" placeholder="Your Name" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control bg-white border-0" placeholder="Your Email" style="height: 55px;">
-                            </div>
-                            <div class="col-12">
-                                <input type="text" class="form-control bg-white border-0" placeholder="Website" style="height: 55px;">
-                            </div>
-                            <div class="col-12">
-                                <textarea class="form-control bg-white border-0" rows="5" placeholder="Comment"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-secondary w-100 py-3" type="submit">Leave Your Comment</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <!-- Comment Form End -->
             </div>
 
             <!-- Sidebar Start -->
