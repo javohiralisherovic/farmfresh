@@ -4,7 +4,6 @@ from farmfresh.views import *
 
 urlpatterns = [
     path('', views.infex, name='index'),
-    path('', views.infex),
     path('product/', ProductsListView.as_view() , name='product'),
     path('product/search', ProductsListView.as_view() , name='search'),
     path('product-view/<int:id>/', ProductView.as_view()),
