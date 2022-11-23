@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-22 11:02+0000\n"
+"POT-Creation-Date: 2022-11-23 08:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: farm/settings.py:125
+#: farm/settings.py:123
 #, fuzzy
 #| msgid "Uzbekistan"
 msgid "Uzbek"
 msgstr "ozbekcha"
 
-#: farm/settings.py:126
+#: farm/settings.py:124
 msgid "English"
 msgstr "inglizcha"
 
@@ -68,8 +68,8 @@ msgstr "Yangi"
 #: templates/feature.html:106 templates/feature.html:230
 #: templates/feature.html:247 templates/index.html:101 templates/index.html:472
 #: templates/index.html:483 templates/product.html:79
-#: templates/product.html:106 templates/product.html:243
-#: templates/product.html:260 templates/product_view.html:80
+#: templates/product.html:106 templates/product.html:218
+#: templates/product.html:235 templates/product_view.html:80
 #: templates/product_view.html:107 templates/product_view.html:314
 #: templates/product_view.html:331 templates/service.html:79
 #: templates/service.html:106 templates/service.html:201
@@ -125,8 +125,9 @@ msgstr "Sahifa tafsilot"
 #: templates/detail.html:88 templates/feature.html:88
 #: templates/feature.html:105 templates/feature.html:107
 #: templates/index.html:110 templates/index.html:307 templates/product.html:88
-#: templates/product_view.html:89 templates/service.html:88
-#: templates/team.html:88 templates/testimonial.html:88
+#: templates/product.html:160 templates/product_view.html:89
+#: templates/service.html:88 templates/team.html:88
+#: templates/testimonial.html:88
 msgid "Features"
 msgstr "Xususiyatlar"
 
@@ -160,8 +161,8 @@ msgstr "Aloqa"
 #: templates/about.html:289 templates/about.html:306 templates/blog.html:267
 #: templates/blog.html:284 templates/feature.html:232
 #: templates/feature.html:249 templates/index.html:199 templates/index.html:473
-#: templates/index.html:484 templates/product.html:245
-#: templates/product.html:262 templates/product_view.html:316
+#: templates/index.html:484 templates/product.html:220
+#: templates/product.html:237 templates/product_view.html:316
 #: templates/product_view.html:333 templates/service.html:203
 #: templates/service.html:220 templates/team.html:195 templates/team.html:212
 #: templates/testimonial.html:175 templates/testimonial.html:192
@@ -207,7 +208,7 @@ msgid "We Are Professional Organic Farmers"
 msgstr "Biz Professional organik fermerlarmiz"
 
 #: templates/about.html:259 templates/blog.html:237 templates/feature.html:202
-#: templates/index.html:449 templates/product.html:215
+#: templates/index.html:449 templates/product.html:190
 #: templates/product_view.html:286 templates/service.html:173
 #: templates/team.html:165 templates/testimonial.html:145
 msgid "Get In Touch"
@@ -216,7 +217,7 @@ msgstr "Aloqa qiling"
 #: templates/about.html:291 templates/about.html:308 templates/blog.html:269
 #: templates/blog.html:286 templates/feature.html:234
 #: templates/feature.html:251 templates/index.html:474 templates/index.html:485
-#: templates/product.html:247 templates/product.html:264
+#: templates/product.html:222 templates/product.html:239
 #: templates/product_view.html:318 templates/product_view.html:335
 #: templates/service.html:105 templates/service.html:205
 #: templates/service.html:222 templates/team.html:197 templates/team.html:214
@@ -225,14 +226,14 @@ msgid "Our Services"
 msgstr "Xizmatlar"
 
 #: templates/about.html:293 templates/blog.html:271 templates/feature.html:236
-#: templates/index.html:475 templates/product.html:249
+#: templates/index.html:475 templates/product.html:224
 #: templates/product_view.html:320 templates/service.html:207
 #: templates/team.html:199 templates/testimonial.html:179
 msgid "Meet the Team"
 msgstr "Jamoani ko'rish"
 
 #: templates/about.html:295 templates/blog.html:273 templates/feature.html:238
-#: templates/index.html:476 templates/product.html:251
+#: templates/index.html:476 templates/product.html:226
 #: templates/product_view.html:322 templates/service.html:209
 #: templates/team.html:201 templates/testimonial.html:181
 msgid "Latest BLog"
@@ -243,8 +244,8 @@ msgstr "So'nggi sahifa"
 #: templates/contact.html:109 templates/contact.html:121
 #: templates/feature.html:126 templates/feature.html:240
 #: templates/feature.html:257 templates/index.html:286 templates/index.html:477
-#: templates/index.html:488 templates/product.html:253
-#: templates/product.html:270 templates/product_view.html:324
+#: templates/index.html:488 templates/product.html:228
+#: templates/product.html:245 templates/product_view.html:324
 #: templates/product_view.html:341 templates/service.html:126
 #: templates/service.html:211 templates/service.html:228
 #: templates/team.html:203 templates/team.html:220
@@ -253,63 +254,63 @@ msgid "Contact Us"
 msgstr "Aloqa"
 
 #: templates/about.html:301 templates/blog.html:279 templates/feature.html:244
-#: templates/index.html:481 templates/product.html:257
+#: templates/index.html:481 templates/product.html:232
 #: templates/product_view.html:328 templates/service.html:215
 #: templates/team.html:207 templates/testimonial.html:187
 msgid "Popular Links"
 msgstr "mashhur havolalar"
 
 #: templates/about.html:310 templates/blog.html:288 templates/feature.html:253
-#: templates/index.html:486 templates/product.html:266
+#: templates/index.html:486 templates/product.html:241
 #: templates/product_view.html:337 templates/service.html:224
 #: templates/team.html:216 templates/testimonial.html:196
 msgid "Meet The Team"
 msgstr "Jamoani ko'rish"
 
 #: templates/about.html:312 templates/blog.html:290 templates/feature.html:255
-#: templates/index.html:487 templates/product.html:268
+#: templates/index.html:487 templates/product.html:243
 #: templates/product_view.html:339 templates/service.html:226
 #: templates/team.html:218 templates/testimonial.html:198
 msgid "Latest Blog"
 msgstr "So'nggi sahifa"
 
 #: templates/about.html:322 templates/blog.html:300 templates/feature.html:265
-#: templates/index.html:495 templates/product.html:278
+#: templates/index.html:495 templates/product.html:253
 #: templates/product_view.html:349 templates/service.html:236
 #: templates/team.html:228 templates/testimonial.html:208
 msgid "Newsletter"
 msgstr "Yangiliklar"
 
 #: templates/about.html:323 templates/blog.html:301 templates/feature.html:266
-#: templates/index.html:496 templates/product.html:279
+#: templates/index.html:496 templates/product.html:254
 #: templates/product_view.html:350 templates/service.html:237
 #: templates/team.html:229 templates/testimonial.html:209
 msgid "Subscribe Our Newsletter"
 msgstr "Yangiliklarga obuna bo'lish"
 
 #: templates/about.html:324 templates/blog.html:302 templates/feature.html:267
-#: templates/index.html:497 templates/product.html:280
+#: templates/index.html:497 templates/product.html:255
 #: templates/product_view.html:351 templates/service.html:238
 #: templates/team.html:230 templates/testimonial.html:210
 msgid "Amet justo diam dolor rebum lorem sit stet sea justo kasd"
 msgstr "Amet justo diam dolor rebum lorem sit stet sea justo kasd"
 
 #: templates/about.html:328 templates/blog.html:306 templates/feature.html:271
-#: templates/index.html:501 templates/product.html:284
+#: templates/index.html:501 templates/product.html:259
 #: templates/product_view.html:355 templates/service.html:242
 #: templates/team.html:234 templates/testimonial.html:214
 msgid "Sign Up"
 msgstr "Obuna bo'lish"
 
 #: templates/about.html:338 templates/blog.html:316 templates/feature.html:281
-#: templates/index.html:511 templates/product.html:294
+#: templates/index.html:511 templates/product.html:269
 #: templates/product_view.html:365 templates/service.html:252
 #: templates/team.html:244 templates/testimonial.html:224
 msgid "Your Site Name"
 msgstr "Saytingiz"
 
 #: templates/about.html:338 templates/blog.html:316 templates/feature.html:281
-#: templates/index.html:511 templates/product.html:294
+#: templates/index.html:511 templates/product.html:269
 #: templates/service.html:252 templates/team.html:244
 msgid ".All Rights Reserved. Designed by"
 msgstr ".Barcha huquqlar himoyalangan. tomonidan ishlab chiqilgan"
@@ -389,7 +390,11 @@ msgstr ""
 "Bu klitada elitr at rebum vaqti edi. Og'riq uzoq va uzoq bo'lsin. Klita o'zi "
 "edi, lekin bu ish emas edi. Avliyo Klita bor-yo'g'i ikki kun va uzoq vaqt "
 "og'ir azob chekdiBu elitr at rebum at clita. Dard uzoq va uzoq bo'lsin. "
-"Klitaning o'zi edi va haqiqat edi, lekin bu qiyin ish edi"
+"Klitaning o'zi edi va haqiqat edi, lekin bu qiyin ish ediBu klitada elitr at "
+"rebum vaqti edi. Og'riq uzoq va uzoq bo'lsin. Klita o'zi edi, lekin bu ish "
+"emas edi. Avliyo Klita bor-yo'g'i ikki kun va uzoq vaqt og'ir azob chekdiBu "
+"elitr at rebum at clita. Dard uzoq va uzoq bo'lsin. Klitaning o'zi edi va "
+"haqiqat edi, lekin bu qiyin ish edi"
 
 #: templates/index.html:285
 msgid ""
@@ -399,7 +404,7 @@ msgstr ""
 "Bu elitr at rebum at clita. Dard uzoq va uzoq bo'lsin. Klitaning o'zi edi va "
 "haqiqat edi, lekin bu qiyin ish edi"
 
-#: templates/index.html:308
+#: templates/index.html:308 templates/product.html:161
 msgid "Why Choose Us!!!"
 msgstr "Nega aynan Biz"
 

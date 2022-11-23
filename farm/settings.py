@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-auk=!gt^2#mno4%o8=c@c^^t!x+norm#na0a-5s^ff4_+lx(-*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','alisherj.pythonanywhere.com']
 
 
 # Application definition
@@ -154,7 +154,7 @@ MODELTRANSLATION_CUSTOM_FIELDS = ('MyField', 'MyOtherField',)
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = "/var/www/alisherj.pythonanywhere.com//static/"
+# STATIC_ROOT = (os.path.join(BASE_DIR, 'static'))
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'

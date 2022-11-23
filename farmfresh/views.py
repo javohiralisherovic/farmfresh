@@ -27,11 +27,11 @@ def infex(request):
 
 @csrf_protect 
 def contact(request):
-    if request.method == "POST":
-        name = request.POST.GET('name')
-        email = request.POST.GET('email')
-        subject = request.POST.GET('subject')
-        message = request.POST.GET('message')
+    if request.method == "GET":
+        name = request.GET.get('name')
+        email = request.GET.get('email')
+        subject = request.GET.get('subject')
+        message = request.GET.get('message')
 
         contact = Contact(
             name=name,
@@ -39,14 +39,15 @@ def contact(request):
             subject=subject,
             message=message,
         )
-        print(name,email,subject,message)
+        # print(name,email,subject,message)
         contact.save()
-        # return redirect('infex')
+        # return redirect('index')
         
         
-    # aboutdisplay = AboutUs.objects.all()
-    # context = {'AboutUs': aboutdisplay}
-    return render(request, 'contact.html')
+    aboutdisplay = AboutUs.objects.all()
+    context = {'AboutUs': aboutdisplay}
+    return render(request, 'contact.html', context)
+
 
 
 class ProductsListView(ListView):

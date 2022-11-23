@@ -124,7 +124,7 @@ class Contact(models.Model):
 class AboutUs(models.Model):
     adress = models.CharField(max_length=255)
     email = models.EmailField()
-    phone_number = models.IntegerField()
+    phone_number = models.CharField(max_length=255)
     city = models.ForeignKey(City, on_delete=models.CASCADE)
 
     def __str__(self):
