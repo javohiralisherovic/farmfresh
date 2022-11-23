@@ -16,8 +16,9 @@ def infex(request):
     postsdisplay = Post.objects.all()
     featuredisplay = Feature.objects.all()
     servicedisplay = Service.objects.all()
+    aboutdisplay = AboutUs.objects.all()
     context = {"Product":productsdisplay, "Farmer":farmersdisplay, "Service":servicedisplay,
-     "Customer":customersdisplay, "Post":postsdisplay, "Feature":featuredisplay}
+     "Customer":customersdisplay, "Post":postsdisplay, "Feature":featuredisplay, 'AboutUs': aboutdisplay}
     # print (context)
 
     def get_queryset(self):
@@ -72,7 +73,8 @@ class ProductsListView(ListView):
             to_price = int(url_dict['to-price'])
             q = q.filter(price__lte=to_price)
 
-        context = {'product': q}
+        aboutdisplay = AboutUs.objects.all()
+        context = {'product': q, 'AboutUs': aboutdisplay}
         return context
 
 
@@ -82,26 +84,37 @@ class ProductView(ListView):
     context_object_name = 'product'
     success_url ='/'
 
+    def get_context_data(self, **kwargs):
+        context = super(ProductView, self).get_context_data(**kwargs)
+        context.update({
+            'AboutUs': AboutUs.objects.all(),
+            'Feature': Feature.objects.all(),
+        })
+        return context
+
     def get_queryset(self):
         return Product.objects.get(id=self.kwargs.get('id'))
 
  
 def about(request):
     farmersdisplay = Farmer.objects.all()
-    context = {"Farmer":farmersdisplay}
+    aboutdisplay = AboutUs.objects.all()
+    context = {"Farmer":farmersdisplay, 'AboutUs': aboutdisplay}
     return render(request, 'about.html', context)
 
 
 def blog(request):
     postsdisplay = Post.objects.all()
     categorydisplay = Category.objects.all()
-    context = {"Post":postsdisplay, "Category":categorydisplay}
+    aboutdisplay = AboutUs.objects.all()
+    context = {"Post":postsdisplay, "Category":categorydisplay, 'AboutUs': aboutdisplay}
     return render(request, 'blog.html', context)
 
 
 def feature(request):
     servicedisplay = Service.objects.all()
-    context = {"Service":servicedisplay}
+    aboutdisplay = AboutUs.objects.all()
+    context = {"Service":servicedisplay, 'AboutUs': aboutdisplay}
     return render(request, 'feature.html', context)
 
 
@@ -109,25 +122,29 @@ def detail(request):
     postsdisplay = Post.objects.all()
     categorydisplay = Category.objects.all()
     customersdisplay = Customer.objects.all()
-    context = {"Customer":customersdisplay, "Post":postsdisplay, "Category":categorydisplay}
+    aboutdisplay = AboutUs.objects.all()
+    context = {"Customer":customersdisplay, "Post":postsdisplay, "Category":categorydisplay, 'AboutUs': aboutdisplay}
     return render(request, 'detail.html', context)
 
 
 def service(request):
     customersdisplay = Customer.objects.all()
     servicedisplay = Service.objects.all()
-    context = {"Customer":customersdisplay, "Service":servicedisplay}
+    aboutdisplay = AboutUs.objects.all()
+    context = {"Customer":customersdisplay, "Service":servicedisplay, 'AboutUs': aboutdisplay}
     return render(request, 'service.html', context)
 
 
 def team(request):
     farmersdisplay = Farmer.objects.all()
-    context = {"Farmer":farmersdisplay}
+    aboutdisplay = AboutUs.objects.all()
+    context = {"Farmer":farmersdisplay, 'AboutUs': aboutdisplay}
     return render(request, 'team.html', context)
 
 
 def testimonial(request):
     customersdisplay = Customer.objects.all()
-    context = {"Customer":customersdisplay}
+    aboutdisplay = AboutUs.objects.all()
+    context = {"Customer":customersdisplay, 'AboutUs': aboutdisplay}
     return render(request, 'testimonial.html', context)
 

@@ -121,12 +121,12 @@
 
     <!-- Page Content -->
     <style>
-        .container{
+        .page{
             padding-left: 15%;
         }
     </style>
     <div class="page-heading header-text">
-        <div class="container">
+        <div class="page">
             <div class="row">
                 <div class="col-md-12">
                     <h1><sup>$</sup>{{product.price}}</h1>
@@ -139,7 +139,7 @@
     </div>
     
     <div class="services">
-        <div class="container">
+        <div class="page">
             <div class="row">
                 <div class="col-md-7">
                     <div>
@@ -218,58 +218,26 @@
 
 
     <!-- Features Start -->
-    <div class="container-fluid bg-primary feature py-5 pb-lg-0 mt-5" style="margin-bottom: 135px;">
+    <div class="container-fluid bg-primary feature py-5 pb-lg-0 my-5">
         <div class="container py-5 pb-lg-0">
             <div class="mx-auto text-center mb-3 pb-2" style="max-width: 500px;">
-                <h6 class="text-uppercase text-secondary">Features</h6>
-                <h1 class="display-5 text-white">Why Choose Us!!!</h1>
+                <h6 class="text-uppercase text-secondary">{% trans "Features" %}</h6>
+                <h1 class="display-5 text-white">{% trans "Why Choose Us!!!" %}</h1>
             </div>
+
             <div class="row g-5">
+                {% for item in Feature %}
                 <div class="col-lg-3">
                     <div class="text-white mb-5">
                         <div class="bg-secondary rounded-pill d-flex align-items-center justify-content-center mb-3"
                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-seedling fs-4 text-white"></i>
+                            <i class="fa fa-car fs-4 text-white"></i>
                         </div>
-                        <h4 class="text-white">100% Organic</h4>
-                        <p class="mb-0">Labore justo vero ipsum sit clita erat lorem magna clita</p>
-                    </div>
-                    <div class="text-white">
-                        <div class="bg-secondary rounded-pill d-flex align-items-center justify-content-center mb-3"
-                            style="width: 60px; height: 60px;">
-                            <i class="fa fa-award fs-4 text-white"></i>
-                        </div>
-                        <h4 class="text-white">Award Winning</h4>
-                        <p class="mb-0">Labore justo vero ipsum sit clita erat lorem magna clita</p>
+                        <h4 class="text-white">{{item.title}}</h4>
+                        <p class="mb-0">{{item.description}}</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="d-block bg-white h-100 text-center p-5 pb-lg-0">
-                        <p>At et justo elitr amet sea at. Magna et sit vero at ipsum sit et dolores rebum. Magna sea eos
-                            sit dolor, ipsum amet no tempor ipsum eirmod lorem eirmod diam tempor dolor eos diam et et
-                            diam dolor ea. Clita est rebum amet dolore sit. Dolor stet dolor duo clita, vero dolor ipsum
-                            amet dolore magna lorem erat stet sed vero dolor</p>
-                        <img class="img-fluid" src="{% static 'img/feature.png' %}" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="text-white mb-5">
-                        <div class="bg-secondary rounded-pill d-flex align-items-center justify-content-center mb-3"
-                            style="width: 60px; height: 60px;">
-                            <i class="fa fa-tractor fs-4 text-white"></i>
-                        </div>
-                        <h4 class="text-white">Modern Farming</h4>
-                        <p class="mb-0">Labore justo vero ipsum sit clita erat lorem magna clita</p>
-                    </div>
-                    <div class="text-white">
-                        <div class="bg-secondary rounded-pill d-flex align-items-center justify-content-center mb-3"
-                            style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt fs-4 text-white"></i>
-                        </div>
-                        <h4 class="text-white">24/7 Support</h4>
-                        <p class="mb-0">Labore justo vero ipsum sit clita erat lorem magna clita</p>
-                    </div>
-                </div>
+                {%endfor%}
             </div>
         </div>
     </div>
@@ -277,94 +245,110 @@
 
 
     <!-- Footer Start -->
+    <style>
+        .footer {
+            text-align: 5%;
+            padding-left: 25%;
+        }
+    </style>
     <div class="container-fluid bg-footer bg-primary text-white mt-5">
-        <div class="container">
+        <div class="footer">
             <div class="row gx-5">
                 <div class="col-lg-8 col-md-6">
                     <div class="row gx-5">
                         <div class="col-lg-4 col-md-12 pt-5 mb-5">
-                            <h4 class="text-white mb-4">{% trans "Get In Touch" %}</h4>
+                            {% for item in AboutUs %}
+                            {% if item.id == 1 %}
+                            <h4 class="text-white mb-4">Get In Touch</h4>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-white me-2"></i>
-                                <p class="text-white mb-0">123 Street, New York, USA</p>
+                                <p class="text-white mb-0">{{item.adress}}</p>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-envelope-open text-white me-2"></i>
-                                <p class="text-white mb-0">info@example.com</p>
+                                <p class="text-white mb-0">{{item.email}}</p>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-telephone text-white me-2"></i>
-                                <p class="text-white mb-0">+99899 8887766</p>
+                                <p class="text-white mb-0">{{item.phone_number}}</p>
                             </div>
                             <div class="d-flex mt-4">
-                                <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-secondary btn-square rounded-circle me-2" href="#"><i
-                                        class="fab fa-linkedin-in"></i></a>
-                                <a class="btn btn-secondary btn-square rounded-circle" href="#"><i
+                                <a class="btn btn-secondary btn-square rounded-circle me-2"
+                                    href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-secondary btn-square rounded-circle me-2"
+                                    href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-secondary btn-square rounded-circle me-2"
+                                    href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-secondary btn-square rounded-circle" href="https://www.instagram.com/"><i
                                         class="fab fa-instagram"></i></a>
                             </div>
+                            {%endif%}
+                            {%endfor%}
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
                             <h4 class="text-white mb-4">Quick Links</h4>
                             <div class="d-flex flex-column justify-content-start">
                                 <a class="text-white mb-2" href="{% url 'index' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Home" %}</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>Home</a>
                                 <a class="text-white mb-2" href="{% url 'about' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "About Us" %}</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>About
+                                    Us</a>
                                 <a class="text-white mb-2" href="{% url 'service' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Our Services" %}</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>Our
+                                    Services</a>
                                 <a class="text-white mb-2" href="{% url 'team' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Meet the Team" %}</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>Meet The
+                                    Team</a>
                                 <a class="text-white mb-2" href="{% url 'blog' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Latest BLog" %}</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>Latest
+                                    Blog</a>
                                 <a class="text-white" href="{% url 'contact' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Contact Us" %}</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>Contact Us</a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <h4 class="text-white mb-4">{% trans "Popular Links" %}</h4>
+                            <h4 class="text-white mb-4">Popular Links</h4>
                             <div class="d-flex flex-column justify-content-start">
                                 <a class="text-white mb-2" href="{% url 'index' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Home" %}</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>Home</a>
                                 <a class="text-white mb-2" href="{% url 'about' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "About Us" %}</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>About
+                                    Us</a>
                                 <a class="text-white mb-2" href="{% url 'service' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Our Services" %}</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>Our
+                                    Services</a>
                                 <a class="text-white mb-2" href="{% url 'team' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Meet The Team" %}</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>Meet The
+                                    Team</a>
                                 <a class="text-white mb-2" href="{% url 'blog' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Latest Blog" %}</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>Latest
+                                    Blog</a>
                                 <a class="text-white" href="{% url 'contact' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Contact Us" %}</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>Contact Us</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mt-lg-n5">
-                    <div
-                        class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-secondary p-5">
-                        <h4 class="text-white">{% trans "Newsletter" %}</h4>
-                        <h6 class="text-white">{% trans "Subscribe Our Newsletter" %}</h6>
-                        <p>{% trans "Amet justo diam dolor rebum lorem sit stet sea justo kasd" %}</p>
-                        <form action="">
-                            <div class="input-group">
-                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                                <button class="btn btn-primary">{% trans "Sign Up" %}</button>
-                            </div>
-                        </form>
-                    </div>
+                    <!-- <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-secondary p-5">
+                            <h4 class="text-white">Newsletter</h4>
+                            <h6 class="text-white">Subscribe Our Newsletter</h6>
+                            <p>Amet justo diam dolor rebum lorem sit stet sea justo kasd</p>
+                            <form action="">
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                                    <button class="btn btn-primary">Sign Up</button>
+                                </div>
+                            </form>
+                        </div> -->
                 </div>
             </div>
         </div>
     </div>
     <div class="container-fluid bg-dark text-white py-4">
         <div class="container text-center">
-            <p class="mb-0">&copy; <a class="text-secondary fw-bold" href="#">{% trans "Your Site Name" %}</a>{% trans ".All
-                Rights Reserved. Designed by" %}<a class="text-secondary fw-bold" href="https://htmlcodex.com">HTML
-                    Codex</a></p>
+            <p class="mb-0">&copy; <a class="text-secondary fw-bold" href="#">Your Site Name</a>. All Rights Reserved.
+                Designed by <a class="text-secondary fw-bold" href="https://htmlcodex.com">HTML Codex</a></p>
         </div>
     </div>
     <!-- Footer End -->
