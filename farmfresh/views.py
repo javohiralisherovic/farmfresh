@@ -10,6 +10,15 @@ from django.views.decorators.csrf import csrf_protect
 
 
 def infex(request):
+    if request.method == "POST":
+        email = request.POST.get('email')
+
+        newsletter = Newsletter(
+            email=email,
+        )
+        print(email)
+        newsletter.save()
+
     productsdisplay = Product.objects.all()
     farmersdisplay = Farmer.objects.all()
     customersdisplay = Customer.objects.all()
@@ -29,6 +38,15 @@ def infex(request):
 
 @csrf_protect 
 def contact(request):
+    if request.method == "POST":
+        email = request.POST.get('email')
+
+        newsletter = Newsletter(
+            email=email,
+        )
+        print(email)
+        newsletter.save()
+        
     if request.method == "GET":
         name = request.GET.get('name')
         email = request.GET.get('email')
@@ -98,6 +116,15 @@ class ProductView(ListView):
 
  
 def about(request):
+    if request.method == "POST":
+        email = request.POST.get('email')
+
+        newsletter = Newsletter(
+            email=email,
+        )
+        print(email)
+        newsletter.save()
+
     farmersdisplay = Farmer.objects.all()
     aboutdisplay = AboutUs.objects.all()
     factdisplay = Fact.objects.all()
@@ -106,6 +133,15 @@ def about(request):
 
 
 def blog(request):
+    if request.method == "POST":
+        email = request.POST.get('email')
+
+        newsletter = Newsletter(
+            email=email,
+        )
+        print(email)
+        newsletter.save()
+
     postsdisplay = Post.objects.all()
     categorydisplay = Category.objects.all()
     aboutdisplay = AboutUs.objects.all()
@@ -114,6 +150,15 @@ def blog(request):
 
 
 def feature(request):
+    if request.method == "POST":
+        email = request.POST.get('email')
+
+        newsletter = Newsletter(
+            email=email,
+        )
+        print(email)
+        newsletter.save()
+        
     servicedisplay = Service.objects.all()
     aboutdisplay = AboutUs.objects.all()
     featuredisplay = Feature.objects.all()
@@ -122,6 +167,15 @@ def feature(request):
 
 
 def detail(request):
+    if request.method == "POST":
+        email = request.POST.get('email')
+
+        newsletter = Newsletter(
+            email=email,
+        )
+        print(email)
+        newsletter.save()
+
     postsdisplay = Post.objects.all()
     categorydisplay = Category.objects.all()
     customersdisplay = Customer.objects.all()
@@ -131,6 +185,15 @@ def detail(request):
 
 
 def service(request):
+    if request.method == "POST":
+        email = request.POST.get('email')
+
+        newsletter = Newsletter(
+            email=email,
+        )
+        print(email)
+        newsletter.save()
+
     customersdisplay = Customer.objects.all()
     servicedisplay = Service.objects.all()
     aboutdisplay = AboutUs.objects.all()
@@ -139,6 +202,15 @@ def service(request):
 
 
 def team(request):
+    if request.method == "POST":
+        email = request.POST.get('email')
+
+        newsletter = Newsletter(
+            email=email,
+        )
+        print(email)
+        newsletter.save()
+
     farmersdisplay = Farmer.objects.all()
     aboutdisplay = AboutUs.objects.all()
     context = {"Farmer":farmersdisplay, 'AboutUs': aboutdisplay}
@@ -146,6 +218,15 @@ def team(request):
 
 
 def testimonial(request):
+    if request.method == "POST":
+        email = request.POST.get('email')
+
+        newsletter = Newsletter(
+            email=email,
+        )
+        print(email)
+        newsletter.save()
+        
     customersdisplay = Customer.objects.all()
     aboutdisplay = AboutUs.objects.all()
     context = {"Customer":customersdisplay, 'AboutUs': aboutdisplay}

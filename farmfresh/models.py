@@ -138,3 +138,10 @@ class Fact(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Newsletter(models.Model):
+    email = models.EmailField(max_length=255)
+
+    def __str__(self):
+        return self.email
