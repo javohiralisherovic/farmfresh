@@ -163,11 +163,25 @@
     transition: .5s;
 }
 
-.product-carousel::after {
+.product-carousel_index::after {
     position: absolute;
     content: "";
     width: 100%;
-    top: 400%;
+    top: 390%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    background: url(../img/bg-product-1.png) left bottom no-repeat, url(../img/bg-product-2.png) right bottom no-repeat;
+    background-size: auto;
+    background-color: var(--primary);
+    z-index: -1;
+}
+
+.product-carousel_product::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: 128%;
     height: 50%;
     bottom: 0;
     left: 0;
