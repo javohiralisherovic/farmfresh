@@ -163,7 +163,7 @@
     transition: .5s;
 }
 
-.product-carousel_index::after {
+.product-carousel-index::after {
     position: absolute;
     content: "";
     width: 100%;
@@ -177,7 +177,7 @@
     z-index: -1;
 }
 
-.product-carousel_product::after {
+.product-carousel-product::after {
     position: absolute;
     content: "";
     width: 100%;
