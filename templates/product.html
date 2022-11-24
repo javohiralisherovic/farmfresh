@@ -125,10 +125,11 @@
             <input type="submit" value="Search">
         </form>
     </div>
+    <br><br>
 
     <!-- Products Start -->
     <div class="container-fluid py-5">
-        <div class="container">
+        <div class="container1">
             <div class="mx-auto text-center mb-5" style="max-width: 500px;">
                 <h6 class="text-primary text-uppercase">{% trans "Products" %}</h6>
                 <h1 class="display-5">{% trans "Our Fresh & Organic Products" %}</h1>
@@ -136,13 +137,16 @@
             <div class="owl-carousel product-carousel px-5">
                 {% for item in product %}
                 <div class="pb-5">
-                    <div class="product-item position-relative bg-white d-flex flex-column text-center">
-                        <img class="img-fluid mb-4" src="{{item.image.url}}" alt="image">
+                    <div class="product-item position-relative bg-white d-flex flex-column text-center"
+                        style="width: 250px; height: 300px;">
+                        <img class="img-fluid mb-4" src="{{item.image.url}}" alt="">
                         <h6 class="mb-3">{{item.title}}</h6>
                         <h5 class="text-primary mb-0">${{item.price}}</h5>
                         <div class="btn-action d-flex justify-content-center">
-                            <a class="btn bg-primary py-2 px-3" href="/product-view/{{item.id}}"><i class="bi bi-cart text-white"></i></a>
-                            <a class="btn bg-secondary py-2 px-3" href="/product-view/{{item.id}}"><i class="bi bi-eye text-white"></i></a>
+                            <a class="btn bg-primary py-2 px-3" href="/product-view/{{item.id}}"><i
+                                    class="bi bi-cart text-white"></i></a>
+                            <a class="btn bg-secondary py-2 px-3" href="/product-view/{{item.id}}"><i
+                                    class="bi bi-eye text-white"></i></a>
                         </div>
                     </div>
                 </div>

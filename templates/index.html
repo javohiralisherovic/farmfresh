@@ -223,6 +223,7 @@
     <div class="container-fluid bg-primary facts py-5 mb-5">
         <div class="container py-5">
             <div class="row gx-5 gy-4">
+                {%for fact in Fact%}
                 <div class="col-lg-3 col-md-6">
                     <div class="d-flex">
                         <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center mb-3"
@@ -230,13 +231,12 @@
                             <i class="fa fa-star fs-4 text-white"></i>
                         </div>
                         <div class="ps-4">
-                            {%for fact in Fact%}
                             <h5 class="text-white">{{fact.name}}</h5>
                             <h1 class="display-5 text-white mb-0" data-toggle="counter-up">{{fact.number}}</h1>
-                            {%endfor%}
                         </div>
                     </div>
                 </div>
+                {%endfor%}
             </div>
         </div>
     </div>
@@ -304,12 +304,11 @@
                 <h6 class="text-primary text-uppercase">{% trans "Products" %}</h6>
                 <h1 class="display-5">{% trans "Our Fresh & Organic Products" %}</h1>
             </div>
-
             <div class="owl-carousel product-carousel px-5">
                 {% for item in Product %}
                 <div class="pb-5">
-                    <div class="product-item position-relative bg-white d-flex flex-column text-center">
-                        <img class="img-fluid mb-4" src="{{item.image.url}}" alt="image">
+                    <div class="product-item position-relative bg-white d-flex flex-column text-center" style="width: 250px; height: 300px;">
+                        <img class="img-fluid mb-4" src="{{item.image.url}}" alt="">
                         <h6 class="mb-3">{{item.title}}</h6>
                         <h5 class="text-primary mb-0">${{item.price}}</h5>
                         <div class="btn-action d-flex justify-content-center">

@@ -92,8 +92,8 @@ class ProductsListView(ListView):
             to_price = int(url_dict['to-price'])
             q = q.filter(price__lte=to_price)
 
-        aboutdisplay = AboutUs.objects.all()
-        context = {'product': q, 'AboutUs': aboutdisplay}
+        featuredisplay = Feature.objects.all()
+        context = {'product': q, "Feature": featuredisplay}
         return context
 
 
@@ -226,7 +226,7 @@ def testimonial(request):
         )
         print(email)
         newsletter.save()
-        
+
     customersdisplay = Customer.objects.all()
     aboutdisplay = AboutUs.objects.all()
     context = {"Customer":customersdisplay, 'AboutUs': aboutdisplay}
