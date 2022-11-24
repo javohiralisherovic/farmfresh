@@ -176,7 +176,7 @@
     opacity: 0;
 }
 
-.product-carousel::after {
+.bg__ibrokhim {
     position: absolute;
     content: "";
     width: 100%;
