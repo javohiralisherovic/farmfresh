@@ -6,10 +6,16 @@ class ExampleForm(forms.Form):
 
 
 from django.forms import ModelForm
-from .models import Contact
+from .models import Contact, Comment
 
 
 class ContactForm(ModelForm):
     class Meta:
         model = Contact
         fields = '__all__'
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('name', 'email', 'body')
