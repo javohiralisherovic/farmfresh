@@ -30,7 +30,7 @@ msgstr "inglizcha"
 
 #: farmfresh/forms.py:5
 msgid "first name"
-msgstr "Ims"
+msgstr "Ism"
 
 #: templates/about.html:8 templates/index.html:9
 msgid "FarmFresh - Organic Farm Website Template"
