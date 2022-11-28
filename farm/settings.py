@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-auk=!gt^2#mno4%o8=c@c^^t!x+norm#na0a-5s^ff4_+lx(-*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1','alisherj.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','alisherj.pythonanywhere.com', 'farmfresh.herokuapp.com']
 
 
 # Application definition
@@ -82,10 +82,20 @@ WSGI_APPLICATION = 'farm.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'farm.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'farm.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'farm',
+        'USER': 'farmuser',
+        'PASSWORD': 'a',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
