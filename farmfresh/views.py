@@ -121,7 +121,8 @@ class ProductsListView(ListView):
             q = q.filter(price__lte=to_price)
 
         featuredisplay = Feature.objects.all()
-        context = {'product': q, "Feature": featuredisplay}
+        aboutdisplay = AboutUs.objects.all()
+        context = {'product': q, "Feature": featuredisplay, "AboutUs":aboutdisplay}
         return context
 
 
