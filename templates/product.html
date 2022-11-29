@@ -164,14 +164,14 @@
                 <h6 class="text-uppercase text-secondary">{% trans "Features" %}</h6>
                 <h1 class="display-5 text-white">{% trans "Why Choose Us!!!" %}</h1>
             </div>
-    
+            
             <div class="row g-5">
                 {% for item in Feature %}
                 <div class="col-lg-3">
                     <div class="text-white mb-5">
-                        <div class="bg-secondary rounded-pill d-flex align-items-center justify-content-center mb-3"
+                        <div class="rounded-pill d-flex align-items-center justify-content-center mb-3"
                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-car fs-4 text-white"></i>
+                            <img class="img-fluid mb-2 " src="{{item.image.url}}" alt="" >
                         </div>
                         <h4 class="text-white">{{item.title}}</h4>
                         <p class="mb-0">{{item.description}}</p>

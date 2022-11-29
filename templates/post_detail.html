@@ -155,20 +155,10 @@
                             {% else %}
                             <h3>Leave a comment</h3>
                             <form method="post" style="margin-top: 1.3em;">
-                                <div class="row g-3">
-                                <!-- {{ comment_form.as_div }} -->
-                                {% csrf_token %}
-                                {% for fm in comment_form %}
-                                <div class="col-15">
-                                    <label>{{fm.label}}</label>
-                                    <input type="text" class="form-control bg-light border-0 px-4" style="height: 55px;">
-
-                                    <!-- <p>{{fm}} </p> -->
-                                </div>
-                                {% endfor %}
-                                <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
-                                </div>
-                            </form>
+                  {{ comment_form.as_p }}
+                  {% csrf_token %}
+                  <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+                </form>
                             {% endif %}
                         </div>
                     </div>

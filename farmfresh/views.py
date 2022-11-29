@@ -3,7 +3,7 @@ from django.db.models import Q
 from django.views.generic import ListView
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_protect 
-from .forms import CommentForm
+from .forms import CommentForm, ContactForm
 from django.shortcuts import render, get_object_or_404
 
 
@@ -30,6 +30,9 @@ def post_detail(request, slug):
                 return redirect('blog')
     else:
         comment_form = CommentForm()
+
+    # aboutdisplay = AboutUs.objects.all()
+    # context = {"AboutUs": aboutdisplay}
 
     return render(request, template_name, {'post': post,
                                            'comments': comments,
@@ -64,37 +67,24 @@ def infex(request):
     return render(request, "index.html", context)
 
 
-@csrf_protect 
 def contact(request):
-        
-    if request.method == "GET":
-        name = request.GET.get('name')
-        email = request.GET.get('email')
-        subject = request.GET.get('subject')
-        message = request.GET.get('message')
-
-        contact = Contact(
-            name=name,
-            email=email,
-            subject=subject,
-            message=message,
-        )
-        # print(name,email,subject,message)
-        contact.save()
-        # return redirect('index')
-
-    if request.method == "POST":
-        email = request.POST.get('email')
-
-        newsletter = Newsletter(
-            email=email,
-        )
-        print(email)
-        newsletter.save()
-        
-        
     aboutdisplay = AboutUs.objects.all()
-    context = {'AboutUs': aboutdisplay}
+    form = ContactForm()
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+        else:
+            print("AAAAAAAAAAAAAA_-----------",  form.errors)
+            form=ContactForm()
+            print("BBBBBBBBBBBBBB-----------",  form.errors)
+
+    context = {
+        'form': form,
+        'AboutUs': aboutdisplay
+    }
+        
     return render(request, 'contact.html', context)
 
 

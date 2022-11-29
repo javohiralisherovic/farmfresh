@@ -121,14 +121,13 @@
                         <h6 class="text-primary text-uppercase">{% trans "Services" %}</h6>
                         <h1 class="display-5">{% trans "Organic Farm Services" %}</h1>
                     </div>
-                    <p class="mb-4">{% trans "It was a time of elitr at rebum at at clita. May the pain be long and long.
-                        Clita was the very thing, and the truth was, but it was hard work" %}</p>
+                    <p class="mb-4">{% trans "It was a time of elitr at rebum at at clita. May the pain be long and long. Clita was the very thing, and the truth was, but it was hard work" %}</p>
                     <a href="{% url 'contact' %}" class="btn btn-primary py-md-3 px-md-5">{% trans "Contact Us" %}</a>
                 </div>
                 {% for serv in Service %}
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item bg-light text-center p-5">
-                        <i class="fa fa-apple-alt display-1 text-primary mb-3"></i>
+                        <img class="img-fluid mb-2 " src="{{serv.image.url}}" alt="" width="100" height="100" >
                         <h4>{{serv.title}}</h4>
                         <p class="mb-0">{{serv.description}}</p>
                     </div>
@@ -145,17 +144,16 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
-                    {% for customer in Customer%}
                     <div class="owl-carousel testimonial-carousel p-5">
+                        {% for customer in Customer%}
                         <div class="testimonial-item text-center text-white">
-                            <img class="img-fluid mx-auto p-2 border border-5 border-secondary rounded-circle mb-4"
-                                src="{% static 'img/testimonial-2.jpg' %}" alt="">
+                            <img class="img-fluid mx-auto p-2 border border-5 border-secondary rounded-circle mb-4" src="{{customer.image.url}}" alt="">
                             <p class="fs-5">{{customer.comment}}</p>
                             <hr class="mx-auto w-25">
                             <h4 class="text-white mb-0">{{customer.first_name}} {{customer.last_name}}</h4>
                         </div>
+                        {%endfor%}
                     </div>
-                    {%endfor%}
                 </div>
             </div>
         </div>

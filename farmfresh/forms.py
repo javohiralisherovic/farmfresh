@@ -12,7 +12,33 @@ from .models import Contact, Comment
 class ContactForm(ModelForm):
     class Meta:
         model = Contact
-        fields = '__all__'
+        fields = ('name', 'email', 'subject', 'message')
+        
+        widgets = {
+            'name': forms.TextInput(attrs={
+                'class': 'form-control bg-light border-0 px-4',
+                'placeholder': 'Your Name',
+                "type": "text",
+                'style':"height: 55px;"
+            }),
+            'email': forms.EmailInput(attrs={
+                'class': 'form-control bg-light border-0 px-4',
+                'placeholder': 'Your Email',
+                "type": "email",
+                'style':"height: 55px;"
+            }),
+            'subject': forms.TextInput(attrs={
+                'class': 'form-control bg-light border-0 px-4',
+                'placeholder': 'Your Subject',
+                "type": "text",
+                'style':"height: 55px;"
+            }),
+            'message': forms.Textarea(attrs={
+                'class': 'form-control bg-light border-0 px-4 py-3',
+                'placeholder': 'Your Subject',
+                'rows':"2" 
+            })
+        }
 
 
 class CommentForm(forms.ModelForm):

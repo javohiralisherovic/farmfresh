@@ -207,11 +207,13 @@
                     <p class="mb-4">{% trans "It was a time of elitr at rebum at at clita. May the pain be long and long. Clita was the very thing, but it was not a work. Saint Clita was in great pain for just two days and for a long time" %}</p>
                     <div class="row gx-5 gy-4">
                         {% for feat in Feature%}
+                        {% if feat.id < 3 %}
                         <div class="col-sm-6">
                             <img class="img-fluid mb-2 " src="{{feat.image.url}}" alt="" width="75" height="75" >
                             <h4>{{feat.title}}</h4>
                             <p class="mb-0">{{feat.description}}</p>
                         </div>
+                        {%endif%}
                         {%endfor%}
                     </div>
                 </div>
