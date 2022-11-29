@@ -49,16 +49,16 @@
                 </div>
             </div>
             <div class="col-lg-3">
+                {% for item in AboutUs %}
+                {% if item.id == 1 %}
                 <div class="d-flex align-items-center justify-content-end">
-                    <a class="btn btn-primary btn-square rounded-circle me-2" href="https://www.twitter.com/"><i
-                            class="fab fa-twitter"></i></a>
-                    <a class="btn btn-primary btn-square rounded-circle me-2" href="https://www.facebook.com/"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-primary btn-square rounded-circle me-2" href="https://www.linkedin.com/"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-primary btn-square rounded-circle" href="https://www.instagram.com/"><i
-                            class="fab fa-instagram"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="{{item.twitter_url}}"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="{{item.facebook_url}}"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="{{item.linkedin_url}}"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle" href="{{item.instagram_url}}"><i class="fab fa-instagram"></i></a>
                 </div>
+                {%endif%}
+                {%endfor%}
             </div>
         </div>
     </div>
@@ -152,6 +152,7 @@
     <div class="container-fluid bg-primary facts py-5 mb-5">
         <div class="container py-5">
             <div class="row gx-5 gy-4">
+                {%for fact in Fact%}
                 <div class="col-lg-3 col-md-6">
                     <div class="d-flex">
                         <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center mb-3"
@@ -159,13 +160,12 @@
                             <i class="fa fa-star fs-4 text-white"></i>
                         </div>
                         <div class="ps-4">
-                            {%for fact in Fact%}
                             <h5 class="text-white">{{fact.name}}</h5>
                             <h1 class="display-5 text-white mb-0" data-toggle="counter-up">{{fact.number}}</h1>
-                            {%endfor%}
                         </div>
                     </div>
                 </div>
+                {%endfor%}
             </div>
         </div>
     </div>
@@ -194,16 +194,11 @@
                             </div>
                         </div>
                         <div class="col-2">
-                            <div
-                                class="h-100 d-flex flex-column align-items-center justify-content-around bg-secondary py-5">
-                                <a class="btn btn-square rounded-circle bg-white" href="#"><i
-                                        class="fab fa-twitter text-secondary"></i></a>
-                                <a class="btn btn-square rounded-circle bg-white" href="#"><i
-                                        class="fab fa-facebook-f text-secondary"></i></a>
-                                <a class="btn btn-square rounded-circle bg-white" href="#"><i
-                                        class="fab fa-linkedin-in text-secondary"></i></a>
-                                <a class="btn btn-square rounded-circle bg-white" href="#"><i
-                                        class="fab fa-instagram text-secondary"></i></a>
+                            <div class="h-100 d-flex flex-column align-items-center justify-content-around bg-secondary py-5">
+                                <a class="btn btn-square rounded-circle bg-white" href="{{farmer.twitter_url}}"><i class="fab fa-twitter text-secondary"></i></a>
+                                <a class="btn btn-square rounded-circle bg-white" href="{{farmer.facebook_url}}"><i class="fab fa-facebook-f text-secondary"></i></a>
+                                <a class="btn btn-square rounded-circle bg-white" href="{{farmer.linkedin_url}}"><i class="fab fa-linkedin-in text-secondary"></i></a>
+                                <a class="btn btn-square rounded-circle bg-white" href="{{farmer.instagram_url}}"><i class="fab fa-instagram text-secondary"></i></a>
                             </div>
                         </div>
                     </div>
@@ -245,12 +240,12 @@
                             </div>
                             <div class="d-flex mt-4">
                                 <a class="btn btn-secondary btn-square rounded-circle me-2"
-                                    href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                                    href="{{item.twitter_url}}"><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-secondary btn-square rounded-circle me-2"
-                                    href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                    href="{{item.facebook_url}}"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-secondary btn-square rounded-circle me-2"
-                                    href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="btn btn-secondary btn-square rounded-circle" href="https://www.instagram.com/"><i
+                                    href="{{item.linkedin_url}}"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-secondary btn-square rounded-circle" href="{{item.instagram_url}}"><i
                                         class="fab fa-instagram"></i></a>
                             </div>
                             {%endif%}

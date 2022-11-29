@@ -66,14 +66,6 @@ def infex(request):
 
 @csrf_protect 
 def contact(request):
-    if request.method == "POST":
-        email = request.POST.get('email')
-
-        newsletter = Newsletter(
-            email=email,
-        )
-        print(email)
-        newsletter.save()
         
     if request.method == "GET":
         name = request.GET.get('name')
@@ -90,6 +82,15 @@ def contact(request):
         # print(name,email,subject,message)
         contact.save()
         # return redirect('index')
+
+    if request.method == "POST":
+        email = request.POST.get('email')
+
+        newsletter = Newsletter(
+            email=email,
+        )
+        print(email)
+        newsletter.save()
         
         
     aboutdisplay = AboutUs.objects.all()

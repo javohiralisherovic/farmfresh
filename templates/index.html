@@ -51,12 +51,16 @@
                 </div>
             </div>
             <div class="col-lg-3">
+                {% for item in AboutUs %}
+                {% if item.id == 1 %}
                 <div class="d-flex align-items-center justify-content-end">
-                    <a class="btn btn-primary btn-square rounded-circle me-2" href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-primary btn-square rounded-circle me-2" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-primary btn-square rounded-circle me-2" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-primary btn-square rounded-circle" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="{{item.twitter_url}}"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="{{item.facebook_url}}"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle me-2" href="{{item.linkedin_url}}"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-primary btn-square rounded-circle" href="{{item.instagram_url}}"><i class="fab fa-instagram"></i></a>
                 </div>
+                {%endif%}
+                {%endfor%}
                 <div class="header-content">
                 
                     <form action="{% url 'set_language' %}" method="post">
@@ -202,16 +206,13 @@
                     </div>
                     <p class="mb-4">{% trans "It was a time of elitr at rebum at at clita. May the pain be long and long. Clita was the very thing, but it was not a work. Saint Clita was in great pain for just two days and for a long time" %}</p>
                     <div class="row gx-5 gy-4">
+                        {% for feat in Feature%}
                         <div class="col-sm-6">
-                            <i class="fa fa-seedling display-1 text-secondary"></i>
-                            <h4>{% trans "100% Organic" %}</h4>
-                            <p class="mb-0">{%trans "It is true that with labor it is a great pain, a great pain" %}</p>
+                            <img class="img-fluid mb-2 " src="{{feat.image.url}}" alt="" width="75" height="75" >
+                            <h4>{{feat.title}}</h4>
+                            <p class="mb-0">{{feat.description}}</p>
                         </div>
-                        <div class="col-sm-6">
-                            <i class="fa fa-award display-1 text-secondary"></i>
-                            <h4>{% trans "Award Winning" %}</h4>
-                            <p class="mb-0">{% trans "It is true that with labor it is a great pain, a great pain" %}</p>
-                        </div>
+                        {%endfor%}
                     </div>
                 </div>
             </div>
@@ -227,9 +228,9 @@
                 {%for fact in Fact%}
                 <div class="col-lg-3 col-md-6">
                     <div class="d-flex">
-                        <div class="bg-secondary rounded-circle d-flex align-items-center justify-content-center mb-3"
+                        <div class="rounded-circle d-flex align-items-center justify-content-center mb-3"
                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-star fs-4 text-white"></i>
+                            <img class="img-fluid mb-2 " src="{{fact.image.url}}" alt="" >
                         </div>
                         <div class="ps-4">
                             <h5 class="text-white">{{fact.name}}</h5>
@@ -259,7 +260,7 @@
                 {% for serv in Service %}
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item bg-light text-center p-5">
-                        <i class="fa fa-apple-alt display-1 text-primary mb-3"></i>
+                        <img class="img-fluid mb-2 " src="{{serv.image.url}}" alt="" width="100" height="100" >
                         <h4>{{serv.title}}</h4>
                         <p class="mb-0">{{serv.description}}</p>
                     </div>
@@ -283,9 +284,9 @@
                 {% for item in Feature %}
                 <div class="col-lg-3">
                     <div class="text-white mb-5">
-                        <div class="bg-secondary rounded-pill d-flex align-items-center justify-content-center mb-3"
+                        <div class="rounded-pill d-flex align-items-center justify-content-center mb-3"
                             style="width: 60px; height: 60px;">
-                            <i class="fa fa-car fs-4 text-white"></i>
+                            <img class="img-fluid mb-2 " src="{{item.image.url}}" alt="" >
                         </div>
                         <h4 class="text-white">{{item.title}}</h4>
                         <p class="mb-0">{{item.description}}</p>
@@ -330,16 +331,16 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
-                    {% for customer in Customer%}
                     <div class="owl-carousel testimonial-carousel p-5">
+                        {% for customer in Customer%}
                         <div class="testimonial-item text-center text-white">
-                            <img class="img-fluid mx-auto p-2 border border-5 border-secondary rounded-circle mb-4" src="{% static 'img/testimonial-2.jpg' %}" alt="">
+                            <img class="img-fluid mx-auto p-2 border border-5 border-secondary rounded-circle mb-4" src="{{customer.image.url}}" alt="">
                             <p class="fs-5">{{customer.comment}}</p>
                             <hr class="mx-auto w-25">
                             <h4 class="text-white mb-0">{{customer.first_name}} {{customer.last_name}}</h4>
                         </div>
+                        {%endfor%}
                     </div>
-                    {%endfor%}
                 </div>
             </div>
         </div>
@@ -368,10 +369,10 @@
                         </div>
                         <div class="col-2">
                             <div class="h-100 d-flex flex-column align-items-center justify-content-around bg-secondary py-5">
-                                <a class="btn btn-square rounded-circle bg-white" href="#"><i class="fab fa-twitter text-secondary"></i></a>
-                                <a class="btn btn-square rounded-circle bg-white" href="#"><i class="fab fa-facebook-f text-secondary"></i></a>
-                                <a class="btn btn-square rounded-circle bg-white" href="#"><i class="fab fa-linkedin-in text-secondary"></i></a>
-                                <a class="btn btn-square rounded-circle bg-white" href="#"><i class="fab fa-instagram text-secondary"></i></a>
+                                <a class="btn btn-square rounded-circle bg-white" href="{{farmer.twitter_url}}"><i class="fab fa-twitter text-secondary"></i></a>
+                                <a class="btn btn-square rounded-circle bg-white" href="{{farmer.facebook_url}}"><i class="fab fa-facebook-f text-secondary"></i></a>
+                                <a class="btn btn-square rounded-circle bg-white" href="{{farmer.linkedin_url}}"><i class="fab fa-linkedin-in text-secondary"></i></a>
+                                <a class="btn btn-square rounded-circle bg-white" href="{{farmer.instagram_url}}"><i class="fab fa-instagram text-secondary"></i></a>
                             </div>
                         </div>
                     </div>
@@ -439,12 +440,12 @@
                             </div>
                             <div class="d-flex mt-4">
                                 <a class="btn btn-secondary btn-square rounded-circle me-2"
-                                    href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                                    href="{{item.twitter_url}}"><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-secondary btn-square rounded-circle me-2"
-                                    href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                    href="{{item.facebook_url}}"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-secondary btn-square rounded-circle me-2"
-                                    href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="btn btn-secondary btn-square rounded-circle" href="https://www.instagram.com/"><i
+                                    href="{{item.linkedin_url}}"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn btn-secondary btn-square rounded-circle" href="{{item.instagram_url}}"><i
                                         class="fab fa-instagram"></i></a>
                             </div>
                             {%endif%}

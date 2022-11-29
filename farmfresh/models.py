@@ -20,7 +20,8 @@ class Post(models.Model):
 
 class Feature(models.Model):
     title = models.CharField(max_length=100)
-    description = models.CharField(max_length=100)
+    description = models.CharField(max_length=1000)
+    image = models.ImageField(upload_to = 'mobile_images', null=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -73,6 +74,10 @@ class Farmer(models.Model):
     city = models.ForeignKey(City, on_delete=models.CASCADE)
     adress = models.CharField(max_length=100)
     image = models.ImageField(upload_to = 'mobile_images', null=None)
+    twitter_url = models.CharField(max_length=200, null=True, blank=True)
+    facebook_url = models.CharField(max_length=200, null=True, blank=True)
+    linkedin_url = models.CharField(max_length=200, null=True, blank=True)
+    instagram_url = models.CharField(max_length=200, null=True, blank=True)
 
     def __str__(self):
         return self.first_name
@@ -86,6 +91,7 @@ class Customer(models.Model):
     city = models.ForeignKey(City, on_delete=models.CASCADE)
     adress = models.CharField(max_length=100)
     comment = models.CharField(max_length=500)
+    image = models.ImageField(upload_to = 'mobile_images', null=True, blank=True)
 
     def __str__(self):
         return self.first_name
@@ -105,7 +111,8 @@ class Payment(models.Model):
 
 class Service(models.Model):
     title = models.CharField(max_length=100)
-    description = models.CharField(max_length=100)
+    description = models.CharField(max_length=1000)
+    image = models.ImageField(upload_to = 'mobile_images', null=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -118,7 +125,7 @@ class Contact(models.Model):
     message = models.TextField(max_length=255)
 
     def __str__(self):
-        return self.email
+        return self.name
 
 
 class AboutUs(models.Model):
@@ -126,6 +133,10 @@ class AboutUs(models.Model):
     email = models.EmailField()
     phone_number = models.CharField(max_length=255)
     city = models.ForeignKey(City, on_delete=models.CASCADE)
+    twitter_url = models.CharField(max_length=200, null=True, blank=True)
+    facebook_url = models.CharField(max_length=200, null=True, blank=True)
+    linkedin_url = models.CharField(max_length=200, null=True, blank=True)
+    instagram_url = models.CharField(max_length=200, null=True, blank=True)
 
     def __str__(self):
         return self.adress
@@ -134,6 +145,7 @@ class AboutUs(models.Model):
 class Fact(models.Model):
     name = models.CharField(max_length=255)
     number = models.IntegerField()
+    image = models.ImageField(upload_to = 'mobile_images', null=True, blank=True)
 
 
     def __str__(self):
