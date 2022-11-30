@@ -45,3 +45,23 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('name', 'email', 'body')
+
+        widgets = {
+            'name': forms.TextInput(attrs={
+                'class': 'form-control bg-light border-0 px-4',
+                'placeholder': 'Your Name',
+                "type": "text",
+                'style':"height: 55px;"
+            }),
+            'email': forms.EmailInput(attrs={
+                'class': 'form-control bg-light border-0 px-4',
+                'placeholder': 'Your Email',
+                "type": "email",
+                'style':"height: 55px;"
+            }),
+            'body': forms.Textarea(attrs={
+                'class': 'form-control bg-light border-0 px-4 py-3',
+                'placeholder': 'Your Comment',
+                'rows':"2" 
+            })
+        }

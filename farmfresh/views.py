@@ -2,7 +2,6 @@ from .models import *
 from django.db.models import Q
 from django.views.generic import ListView
 from django.shortcuts import render, redirect
-from django.views.decorators.csrf import csrf_protect 
 from .forms import CommentForm, ContactForm
 from django.shortcuts import render, get_object_or_404
 
@@ -31,13 +30,13 @@ def post_detail(request, slug):
     else:
         comment_form = CommentForm()
 
-    # aboutdisplay = AboutUs.objects.all()
-    # context = {"AboutUs": aboutdisplay}
+    aboutdisplay = AboutUs.objects.all()
 
     return render(request, template_name, {'post': post,
                                            'comments': comments,
                                            'new_comment': new_comment,
-                                           'comment_form': comment_form})
+                                           'comment_form': comment_form,
+                                           "AboutUs": aboutdisplay})
 
 
 def infex(request):
