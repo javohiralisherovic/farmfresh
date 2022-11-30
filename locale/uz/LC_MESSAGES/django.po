@@ -9,14 +9,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-30 14:00+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2022-11-30 09:15+0000\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
 
 #: djangoenv/lib/python3.9/site-packages/django/contrib/messages/apps.py:15
 #, fuzzy
@@ -79,8 +80,8 @@ msgstr ""
 
 #: djangoenv/lib/python3.9/site-packages/django/core/validators.py:264
 msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
+" hyphens."
 msgstr ""
 
 #: djangoenv/lib/python3.9/site-packages/django/core/validators.py:276
@@ -271,15 +272,15 @@ msgstr ""
 #: djangoenv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1458
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
-"uuuuuu]][TZ] format."
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ] format."
 msgstr ""
 
 #: djangoenv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1466
 #, python-format
 msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
+"“%(value)s” value has the correct format (YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
 msgstr ""
 
 #: djangoenv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1471
@@ -298,8 +299,8 @@ msgstr ""
 #: djangoenv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1754
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
-"uuuuuu] format."
+"“%(value)s” value has an invalid format. It must be in [DD] "
+"[[HH:]MM:]ss[.uuuuuu] format."
 msgstr ""
 
 #: djangoenv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1758
@@ -458,7 +459,8 @@ msgid "Many-to-many relationship"
 msgstr ""
 
 #. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
+#. characters will prevent the default label_suffix to be appended to the
+#. label
 #: djangoenv/lib/python3.9/site-packages/django/forms/boundfield.py:176
 msgid ":?.!"
 msgstr ""
@@ -508,7 +510,8 @@ msgstr ""
 
 #: djangoenv/lib/python3.9/site-packages/django/forms/fields.py:622
 #, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid ""
+"Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
 "Ensure this filename has at most %(max)d characters (it has %(length)d)."
 msgstr[0] ""
@@ -613,7 +616,8 @@ msgid "The inline value did not match the parent instance."
 msgstr ""
 
 #: djangoenv/lib/python3.9/site-packages/django/forms/models.py:1435
-msgid "Select a valid choice. That choice is not one of the available choices."
+msgid ""
+"Select a valid choice. That choice is not one of the available choices."
 msgstr ""
 
 #: djangoenv/lib/python3.9/site-packages/django/forms/models.py:1574
@@ -1068,10 +1072,10 @@ msgstr ""
 
 #: djangoenv/lib/python3.9/site-packages/django/views/csrf.py:127
 msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a "
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
+" including the “Referrer-Policy: no-referrer” header, please remove them. "
+"The CSRF protection requires the “Referer” header to do strict referer "
+"checking. If you’re concerned about privacy, use alternatives like <a "
 "rel=\"noreferrer\" …> for links to third-party sites."
 msgstr ""
 
@@ -1123,8 +1127,8 @@ msgstr ""
 #: djangoenv/lib/python3.9/site-packages/django/views/generic/dates.py:652
 #, python-format
 msgid ""
-"Future %(verbose_name_plural)s not available because %(class_name)s."
-"allow_future is False."
+"Future %(verbose_name_plural)s not available because "
+"%(class_name)s.allow_future is False."
 msgstr ""
 
 #: djangoenv/lib/python3.9/site-packages/django/views/generic/dates.py:692
@@ -1180,10 +1184,10 @@ msgstr ""
 #: djangoenv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:222
 #, python-format
 msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" "
-"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
-"configured any URLs."
+"You are seeing this page because <a "
+"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
+"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
+"and you have not configured any URLs."
 msgstr ""
 
 #: djangoenv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:230
@@ -1249,18 +1253,18 @@ msgstr "Biz sizning oilangiz uchun Organik mevalar ishlab chiqaramiz"
 #: templates/all/about.html:36 templates/all/index.html:86
 #, fuzzy
 #| msgid ""
-#| "It was a time of elitr at rebum at at clita. May the pain be long and "
-#| "long. Clita was the very thing, and the truth was, but it was hard work"
+#| "It was a time of elitr at rebum at at clita. May the pain be long and long. "
+#| "Clita was the very thing, and the truth was, but it was hard work"
 msgid ""
 "It was a time of elitr at rebum at at clita. May the pain be long and long. "
 "Clita was the very thing, but it was not a work. Saint Clita was in great "
 "pain for just two days and for a long time"
 msgstr ""
-"Bu klitada elitr at rebum vaqti edi. Og'riq uzoq va uzoq bo'lsin. Klita o'zi "
-"edi, lekin bu ish emas edi. Avliyo Klita bor-yo'g'i ikki kun va uzoq vaqt "
+"Bu klitada elitr at rebum vaqti edi. Og'riq uzoq va uzoq bo'lsin. Klita o'zi"
+" edi, lekin bu ish emas edi. Avliyo Klita bor-yo'g'i ikki kun va uzoq vaqt "
 "og'ir azob chekdiBu elitr at rebum at clita. Dard uzoq va uzoq bo'lsin. "
-"Klitaning o'zi edi va haqiqat edi, lekin bu qiyin ish ediBu klitada elitr at "
-"rebum vaqti edi. Og'riq uzoq va uzoq bo'lsin. Klita o'zi edi, lekin bu ish "
+"Klitaning o'zi edi va haqiqat edi, lekin bu qiyin ish ediBu klitada elitr at"
+" rebum vaqti edi. Og'riq uzoq va uzoq bo'lsin. Klita o'zi edi, lekin bu ish "
 "emas edi. Avliyo Klita bor-yo'g'i ikki kun va uzoq vaqt og'ir azob chekdiBu "
 "elitr at rebum at clita. Dard uzoq va uzoq bo'lsin. Klitaning o'zi edi va "
 "haqiqat edi, lekin bu qiyin ish edi"
@@ -1347,8 +1351,8 @@ msgid ""
 "It was a time of elitr at rebum at at clita. May the pain be long and long. "
 "Clita was the very thing, and the truth was, but it was hard work"
 msgstr ""
-"Bu elitr at rebum at clita. Dard uzoq va uzoq bo'lsin. Klitaning o'zi edi va "
-"haqiqat edi, lekin bu qiyin ish edi"
+"Bu elitr at rebum at clita. Dard uzoq va uzoq bo'lsin. Klitaning o'zi edi va"
+" haqiqat edi, lekin bu qiyin ish edi"
 
 #: templates/all/feature.html:53 templates/all/index.html:161
 #: templates/all/product.html:71 templates/all/product_view.html:106
@@ -1453,11 +1457,11 @@ msgstr "Xizmatlar"
 #: templates/all/testimonial.html:11 templates/all/testimonial.html:13
 #: templates/base.html:117
 msgid "Testimonial"
-msgstr "Guvoh"
+msgstr "Xaridorlar"
 
 #: templates/base.html:9
 msgid "FarmFresh - Organic Farm Website Template"
-msgstr "xo'jalik yangi"
+msgstr "Xo'jalik firma"
 
 #: templates/base.html:49 templates/base.html:99
 msgid "Farm"
@@ -1514,7 +1518,6 @@ msgstr "Obuna bo'lish"
 #~ msgstr "Mukofot Sovrindir"
 
 #, fuzzy
-#~| msgid "Products"
 #~ msgid "Our Products"
 #~ msgstr "Mahsulotlar"
 
@@ -1552,7 +1555,6 @@ msgstr "Obuna bo'lish"
 #~ msgstr ".Barcha huquqlar himoyalangan. tomonidan ishlab chiqilgan"
 
 #, fuzzy
-#~| msgid ".All Rights Reserved. Designed by"
 #~ msgid ".AllRights Reserved. Designed by"
 #~ msgstr ".Barcha huquqlar himoyalangan. tomonidan ishlab chiqilgan"
 
@@ -1561,13 +1563,13 @@ msgstr "Obuna bo'lish"
 
 #~ msgid ""
 #~ "At and just elitr amet sea at It is true that it is great, but it is the "
-#~ "same and the pains of the rebuke. May the pain be great for them. Clita "
-#~ "is the subject of great pain. The pain was a great pain, but the pain was "
-#~ "great "
+#~ "same and the pains of the rebuke. May the pain be great for them. Clita is "
+#~ "the subject of great pain. The pain was a great pain, but the pain was great"
+#~ " "
 #~ msgstr ""
 #~ "At va faqat elitr amet sea at Bu juda zo'r, lekin u bir xil va tanbeh "
-#~ "og'riqlari. Dard ularga zo'r bo'lsin. Klita katta dard mavzusi. Dard "
-#~ "katta azob edi. , lekin og'riq juda katta edi "
+#~ "og'riqlari. Dard ularga zo'r bo'lsin. Klita katta dard mavzusi. Dard katta "
+#~ "azob edi. , lekin og'riq juda katta edi "
 
 #~ msgid "Modern Farming"
 #~ msgstr "Zamonaviy Firma"

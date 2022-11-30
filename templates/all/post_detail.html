@@ -31,7 +31,7 @@
              <div class="col-md-8 card mb-400  mt-3 left  top">
                 <div class="card-body">
                     <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
-                    <p class="text-primary text-uppercase">{{ post.author }} | {{ post.created_on }}</p>
+                    <p class="text-primary text-uppercase">{{ post.author_name }} | {{ post.created_on }}</p>
                     <p class="display-5">{{ post.content | safe }}</p>
                 </div>
             </div><br><br>
