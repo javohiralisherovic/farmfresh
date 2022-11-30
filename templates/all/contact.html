@@ -44,13 +44,13 @@
                     {% for item in AboutUs %}
                     {% if item.id == 1 %}
                     <div class="bg-secondary h-100 p-5">
-                        <h2 class="text-white mb-4">Get In Touch</h2>
+                        <h2 class="text-white mb-4">{% trans "Get In Touch" %}</h2>
                         <div class="d-flex mb-4">
                             <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
                                 <i class="bi bi-geo-alt fs-4 text-white"></i>
                             </div>
                             <div class="ps-3">
-                                <h5 class="text-white">Our Office</h5>
+                                <h5 class="text-white">{% trans "Our Office" %}</h5>
                                 <span class="text-white">{{item.adress}}</span>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                                 <i class="bi bi-envelope-open fs-4 text-white"></i>
                             </div>
                             <div class="ps-3">
-                                <h5 class="text-white">Email Us</h5>
+                                <h5 class="text-white">{% trans "Email Us" %}</h5>
                                 <span class="text-white">{{item.email}}</span>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
                                 <i class="bi bi-phone-vibrate fs-4 text-white"></i>
                             </div>
                             <div class="ps-3">
-                                <h5 class="text-white">Call Us</h5>
+                                <h5 class="text-white">{% trans "Call Us" %}</h5>
                                 <span class="text-white">{{item.phone_number}}</span>
                             </div>
                         </div>

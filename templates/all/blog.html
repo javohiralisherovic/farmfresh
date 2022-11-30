@@ -100,7 +100,7 @@
 
           <!-- Category Start -->
           <div class="mb-5">
-            <h2 class="mb-4">Categories</h2>
+            <h2 class="mb-4">{% trans "Categories" %}</h2>
             {%for item in Category%}
             <div
               class="d-flex flex-column justify-content-start bg-primary p-4"
@@ -115,7 +115,7 @@
 
           <!-- Recent Post Start -->
           <div class="mb-5">
-            <h2 class="mb-4">Recent Post</h2>
+            <h2 class="mb-4">{% trans "Recent Post" %}</h2>
             <div class="bg-primary p-4">
               {% for post in Post %}
               <div class="d-flex overflow-hidden mb-3">
