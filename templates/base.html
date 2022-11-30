@@ -40,7 +40,9 @@
             <div class="col-lg-3">
                 <div class="d-flex align-items-center justify-content-start">
                     <i class="bi bi-phone-vibrate fs-1 text-primary me-2"></i>
-                    <h2 class="mb-0">+99899 8887766</h2>
+                    {% for item in AboutUs %}
+                    <h2 class="mb-0">{{item.phone_number}}</h2>
+                    {%endfor%}
                 </div>
             </div>
             <div class="col-lg-6">
@@ -140,7 +142,7 @@
                         <div class="col-lg-4 col-md-12 pt-5 mb-5">
                             {% for item in AboutUs %}
                             {% if item.id == 1 %}
-                            <h4 class="text-white mb-4">Get In Touch</h4>
+                            <h4 class="text-white mb-4">{% trans "Get In Touch" %}</h4>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-white me-2"></i>
                                 <p class="text-white mb-0">{{item.adress}}</p>
@@ -161,51 +163,43 @@
                                 <a class="btn btn-secondary btn-square rounded-circle me-2"
                                     href="{{item.linkedin_url}}"><i class="fab fa-linkedin-in"></i></a>
                                 <a class="btn btn-secondary btn-square rounded-circle" href="{{item.instagram_url}}"><i
-                                        class="fab fa-instagram"></i></a>
+                                    class="fab fa-instagram"></i></a>
                             </div>
                             {%endif%}
                             {%endfor%}
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <h4 class="text-white mb-4">Quick Links</h4>
+                            <h4 class="text-white mb-4">{% trans "Quick Links" %}</h4>
                             <div class="d-flex flex-column justify-content-start">
                                 <a class="text-white mb-2" href="{% url 'index' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>Home</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Home" %}</a>
                                 <a class="text-white mb-2" href="{% url 'about' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>About
-                                    Us</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "About Us" %}</a>
                                 <a class="text-white mb-2" href="{% url 'service' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>Our
-                                    Services</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Our Services" %}</a>
                                 <a class="text-white mb-2" href="{% url 'team' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>Meet The
-                                    Team</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Meet The Team" %}</a>
                                 <a class="text-white mb-2" href="{% url 'blog' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>Latest
-                                    Blog</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Latest Blog" %}</a>
                                 <a class="text-white" href="{% url 'contact' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>Contact Us</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Contact Us" %}</a>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <h4 class="text-white mb-4">Popular Links</h4>
+                            <h4 class="text-white mb-4">{% trans "Popular Links" %}</h4>
                             <div class="d-flex flex-column justify-content-start">
                                 <a class="text-white mb-2" href="{% url 'index' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>Home</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Home" %}</a>
                                 <a class="text-white mb-2" href="{% url 'about' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>About
-                                    Us</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "About Us" %}</a>
                                 <a class="text-white mb-2" href="{% url 'service' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>Our
-                                    Services</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Our Services" %}</a>
                                 <a class="text-white mb-2" href="{% url 'team' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>Meet The
-                                    Team</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Meet The Team" %}</a>
                                 <a class="text-white mb-2" href="{% url 'blog' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>Latest
-                                    Blog</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Latest Blog" %}</a>
                                 <a class="text-white" href="{% url 'contact' %}"><i
-                                        class="bi bi-arrow-right text-white me-2"></i>Contact Us</a>
+                                        class="bi bi-arrow-right text-white me-2"></i>{% trans "Contact Us" %}</a>
                             </div>
                         </div>
                     </div>

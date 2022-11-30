@@ -16,4 +16,5 @@ urlpatterns = [
     path('service/', service,  name = 'service'),
     path('team/', team, name = 'team'),
     path('testimonial/', testimonial, name = 'testimonial'),
+    path('farmer_detail/<int:id>/', FarmerDetail.as_view()),
 ]

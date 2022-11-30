@@ -251,3 +251,18 @@ def testimonial(request):
     context = {"Customer":customersdisplay, 'AboutUs': aboutdisplay}
     return render(request, 'all/testimonial.html', context)
 
+class FarmerDetail(ListView):
+    model=Farmer
+    template_name = 'all/farmer_detail.html'
+    context_object_name = 'farmer'
+    success_url ='/'
+
+    def get_context_data(self, **kwargs):
+        context = super(FarmerDetail, self).get_context_data(**kwargs)
+        context.update({
+            'AboutUs': AboutUs.objects.all(),
+        })
+        return context
+
+    def get_queryset(self):
+        return Farmer.objects.get(id=self.kwargs.get('id'))

@@ -243,8 +243,9 @@
                             <div class="position-relative">
                                 <img class="img-fluid w-100" src="{{farmer.image.url}}" alt="">
                                 <div class="position-absolute start-0 bottom-0 w-100 py-3 px-4" style="background: rgba(52, 173, 84, .85);">
-                                    <h4 class="text-white">{{farmer.first_name}}</h4>
-                                    <span class="text-white">{{farmer.last_name}}</span>
+                                    <a class="blog-overlay" href="/farmer_detail/{{farmer.id}}"></a>
+                                    <h4 class="text-white fw-bold">{{farmer.first_name}}</h4>
+                                    <span class="text-white fw-bold">{{farmer.last_name}}</span>
                                 </div>
                             </div>
                         </div>

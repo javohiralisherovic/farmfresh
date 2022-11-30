@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load i18n %}
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 bg-hero mb-5">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-white mb-md-4">{% trans "Farmer Detail" %}</h1>
+                    <a href="{% url 'index' %}" class="btn btn-primary py-md-3 px-md-5 me-3">{% trans "Home" %}</a>
+                    <a href="{% url 'team' %}" class="btn btn-secondary py-md-3 px-md-5">{% trans "Team" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+<!-- Farmer Start -->
+    <div class="container py-5">
+        <div class="row g-0">
+            <div class="col-lg-8">
+                <div class="mb-5">
+                    <div class="row g-0 mb-9">
+                        <div class="col-md-6">
+                            <img class="img-fuid w-100" src="{{farmer.image.url}}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Start -->
+            <div class="col-lg-4">
+                <!-- Farmer Detail Start -->
+                <div class="mb-7">
+                    <h2 class="mb-4">{% trans "Farmer Detail" %}</h2>
+                    <div class="bg-primary p-4 mt-522222">
+                            <a class="d-flex align-items-center bg-white text-dark fs-5 fw-bold px-3 mb-0"> Name : {{farmer.first_name}} {{farmer.last_name}}
+                    </div>
+                    <div class="bg-primary p-4">
+                            <a class="d-flex align-items-center bg-white text-dark fs-5 fw-bold px-3 mb-0">Designation : {{farmer.designation}}</a>
+                    </div>
+                    <div class="bg-primary p-4">
+                            <a class="d-flex align-items-center bg-white text-dark fs-5 fw-bold px-3 mb-0">Email : {{farmer.email}}</a>
+                    </div>
+                    <div class="bg-primary p-4">
+                            <a class="d-flex align-items-center bg-white text-dark fs-5 fw-bold px-3 mb-0">Phone Number : {{farmer.contact_number}}</a>
+                    </div>
+                    <div class="bg-primary p-4">
+                            <a class="d-flex align-items-center bg-white text-dark fs-5 fw-bold px-3 mb-0">City : {{farmer.city}}</a>
+                    </div>
+                    <div class="col-lg-77">
+                        <div class="bg-primary p-4">
+                        <div class="d-flex align-items-center">
+                        <a class="btn btn-secondary btn-square rounded-circle me-2" href="{{farmer.twitter_url}}"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-secondary btn-square rounded-circle me-2" href="{{farmer.facebook_url}}"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-secondary btn-square rounded-circle me-2" href="{{farmer.linkedin_url}}"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-secondary btn-square rounded-circle me-2" href="{{farmer.instagram_url}}"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Farmer Detail End -->
+            </div>
+            <!-- Sidebar End -->
+        </div>
+    </div>
+    <!-- Farmer End -->
+
+    
+
+    {% endblock content %}
