@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-30 11:48+0500\n"
+"POT-Creation-Date: 2022-11-30 14:00+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1300,6 +1300,12 @@ msgstr "Aloqa"
 msgid "Please Feel Free To Contact Us"
 msgstr "Bizga murojaat qilishda erkin bo'ling"
 
+#: templates/all/contact.html:37
+#, fuzzy
+#| msgid "Pages"
+msgid "Send Message"
+msgstr "Sahifa"
+
 #: templates/all/contact.html:47
 msgid "Get In Touch"
 msgstr "Aloqa qiling"
@@ -1425,6 +1431,10 @@ msgstr "Shu yerga izoh yozing"
 #| msgid "Our Blog"
 msgid "Blog"
 msgstr "Bizning Sahifa"
+
+#: templates/all/post_detail.html:53
+msgid "Send Comment"
+msgstr "Izoh yuborish"
 
 #: templates/all/product_view.html:39
 #, fuzzy

@@ -50,7 +50,7 @@
                         <div class="row g-3">
                             {{ comment_form.as_p }}
                             {% csrf_token %}
-                            <button class="btn btn-secondary w-100 py-3" type="submit">Send Message</button>
+                            <button class="btn btn-secondary w-100 py-3" type="submit">{% trans "Send Comment" %}</button>
                         </div>
                         </form>
                     </div>
