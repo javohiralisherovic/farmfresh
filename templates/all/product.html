@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load i18n %}
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 bg-hero mb-5">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-white mb-md-4">{% trans "Products" %}</h1>
+                    <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">{% trans "Home" %}</a>
+                    <a href="" class="btn btn-secondary py-md-3 px-md-5">{% trans "Products" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <style>
+        .search-all {
+            text-align: center;
+            padding-top: 5%;
+        }
+    </style>
+    <div class="search-all">
+        <form action="search" method="get">
+            <input type="text" name="search-text" placeholder="Seached text">
+            <input type="number" name="from-price" placeholder="Price from">
+            <input type="number" name="to-price" placeholder="price to">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <br><br>
+
+    <!-- Products Start -->
+    <div class="container-fluid py-5">
+        <div class="container1">
+            <div class="mx-auto text-center mb-5" style="max-width: 500px;">
+                <h6 class="text-primary text-uppercase">{% trans "Products" %}</h6>
+                <h1 class="display-5">{% trans "Our Fresh & Organic Products" %}</h1>
+            </div>
+            <div class="owl-carousel product-carousel px-5">
+                {% for item in product %}
+                <div class="pb-5 d-flex">
+                    <div class="product-item position-relative bg-white d-flex flex-column text-center"
+                        style="width: 250px; height: 300px;">
+                        <img class="img-fluid mb-4" src="{{item.image.url}}" alt="">
+                        <h6 class="mb-3">{{item.title}}</h6>
+                        <h5 class="text-primary mb-0">${{item.price}}</h5>
+                        <div class="btn-action d-flex justify-content-center">
+                            <a class="btn bg-primary py-2 px-3" href="/product-view/{{item.id}}"><i
+                                    class="bi bi-cart text-white"></i></a>
+                            <a class="btn bg-secondary py-2 px-3" href="/product-view/{{item.id}}"><i
+                                    class="bi bi-eye text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Products End -->
+
+
+    <!-- Features Start -->
+    <div class="container-fluid bg-primary feature py-5 pb-lg-0 my-5">
+        <div class="container py-5 pb-lg-0">
+            <div class="mx-auto text-center mb-3 pb-2" style="max-width: 500px;">
+                <h6 class="text-uppercase text-secondary">{% trans "Features" %}</h6>
+                <h1 class="display-5 text-white">{% trans "Why Choose Us!!!" %}</h1>
+            </div>
+            
+            <div class="row g-5">
+                {% for item in Feature %}
+                <div class="col-lg-3">
+                    <div class="text-white mb-5">
+                        <div class="rounded-pill d-flex align-items-center justify-content-center mb-3"
+                            style="width: 60px; height: 60px;">
+                            <img class="img-fluid mb-2 " src="{{item.image.url}}" alt="" >
+                        </div>
+                        <h4 class="text-white">{{item.title}}</h4>
+                        <p class="mb-0">{{item.description}}</p>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+    <!-- Features Start -->
+    
+
+    {% endblock content %}

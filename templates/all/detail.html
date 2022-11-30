@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load i18n %}
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 bg-hero mb-5">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-white mb-md-4">{% trans "Blog Grid" %}</h1>
+                    <a href="{% url 'index' %}" class="btn btn-primary py-md-3 px-md-5 me-3">{% trans "Home" %}</a>
+                    <a href="{% url 'blog' %}" class="btn btn-secondary py-md-3 px-md-5">{% trans "Blog Grid" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- Blog Start -->
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <!-- Blog Detail Start -->
+                <div class="mb-5">
+                    {% for post in Post %}
+                    <div class="row g-5 mb-5">
+                        <div class="col-md-6">
+                            <img class="img-fluid w-100" src="{{post.image.url}}" alt="">
+                        </div>
+                    </div>
+                    <h1 class="mb-4">{{post.title}}</h1>
+                    <p>{{post.slug}}</p>
+                    {%endfor%}
+                </div>
+                <!-- Blog Detail End -->
+            </div>
+
+            <!-- Sidebar Start -->
+            <div class="col-lg-4">
+                <!-- Search Form Start -->
+                <div class="mb-5">
+                    <div class="input-group">
+                        <input type="text" class="form-control p-3" placeholder="Keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+                <!-- Search Form End -->
+
+                <!-- Category Start -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Categories</h2>
+                    {%for item in Category%}
+                    <div class="d-flex flex-column justify-content-start bg-primary p-4">
+                        <a class="fs-5 fw-bold text-white mb-2" href="#"><i class="bi bi-arrow-right me-2"></i>{{item.name}}</a>
+                    </div>
+                    {%endfor%}
+                </div>
+                <!-- Category End -->
+
+                <!-- Recent Post Start -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Recent Post</h2>
+                    <div class="bg-primary p-4">
+                        {% for post in Post %}
+                        <div class="d-flex overflow-hidden mb-3">
+                            <img class="img-fluid flex-shrink-0" src="{{post.image.url}}" style="width: 75px;" alt="">
+                            <a href="" class="d-flex align-items-center bg-white text-dark fs-5 fw-bold px-3 mb-0">{{post.title}}
+                            </a>
+                        </div>
+                        {%endfor%}
+                    </div>
+                </div>
+                <!-- Recent Post End -->
+
+                <!-- Image Start -->
+                <div class="mb-5">
+                    <img src="{% static 'img/blog-1.jpg' %}" alt="" class="img-fluid rounded">
+                </div>
+                <!-- Image End -->
+            </div>
+            <!-- Sidebar End -->
+        </div>
+    </div>
+    <!-- Blog End -->
+
+
+    {% endblock content %}

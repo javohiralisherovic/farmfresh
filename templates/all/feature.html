@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load i18n %}
+
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 bg-hero mb-5">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h1 class="display-1 text-white mb-md-4">{% trans "Features" %}</h1>
+                    <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">{% trans "Home" %}</a>
+                    <a href="" class="btn btn-secondary py-md-3 px-md-5">{% trans "Features" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- Services Start -->
+        <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="mb-3">
+                        <h6 class="text-primary text-uppercase">{% trans "Services" %}</h6>
+                        <h1 class="display-5">{% trans "Organic Farm Services" %}</h1>
+                    </div>
+                    <p class="mb-4">{% trans "It was a time of elitr at rebum at at clita. May the pain be long and long. Clita was the very thing, and the truth was, but it was hard work" %}</p>
+                    <a href="{% url 'contact' %}" class="btn btn-primary py-md-3 px-md-5">{% trans "Contact Us" %}</a>
+                </div>
+                {% for serv in Service %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light text-center p-5">
+                        <img class="img-fluid mb-2 " src="{{serv.image.url}}" alt="" width="100" height="100" >
+                        <h4>{{serv.title}}</h4>
+                        <p class="mb-0">{{serv.description}}</p>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+    <!-- Features Start -->
+    <div class="container-fluid bg-primary feature py-5 pb-lg-0 my-5">
+        <div class="container py-5 pb-lg-0">
+            <div class="mx-auto text-center mb-3 pb-2" style="max-width: 500px;">
+                <h6 class="text-uppercase text-secondary">{% trans "Features" %}</h6>
+                <h1 class="display-5 text-white">{% trans "Why Choose Us!!!" %}</h1>
+            </div>
+            
+            <div class="row g-5">
+                {% for item in Feature %}
+                <div class="col-lg-3">
+                    <div class="text-white mb-5">
+                        <div class="rounded-pill d-flex align-items-center justify-content-center mb-3"
+                            style="width: 60px; height: 60px;">
+                            <img class="img-fluid mb-2 " src="{{item.image.url}}" alt="" >
+                        </div>
+                        <h4 class="text-white">{{item.title}}</h4>
+                        <p class="mb-0">{{item.description}}</p>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+    <!-- Features Start -->
+    
+
+    {% endblock content %}

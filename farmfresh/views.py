@@ -11,7 +11,7 @@ from django.shortcuts import render, get_object_or_404
 
 
 def post_detail(request, slug):
-    template_name = 'post_detail.html'
+    template_name = 'all/post_detail.html'
     post = get_object_or_404(Post, slug=slug)
     comments = post.comments.filter(active=True)
     new_comment = None
@@ -64,7 +64,7 @@ def infex(request):
 
     def get_queryset(self):
         return Feature.objects.get(id=self.kwargs.get('id'))
-    return render(request, "index.html", context)
+    return render(request, "all/index.html", context)
 
 
 def contact(request):
@@ -76,7 +76,7 @@ def contact(request):
             form.save()
             return redirect('/')
         else:
-            print("AAAAAAAAAAAAAA_-----------",  form.errors)
+            print("AAAAAAAAAAAAA-----------",  form.errors)
             form=ContactForm()
             print("BBBBBBBBBBBBBB-----------",  form.errors)
 
@@ -85,13 +85,13 @@ def contact(request):
         'AboutUs': aboutdisplay
     }
         
-    return render(request, 'contact.html', context)
+    return render(request, 'all/contact.html', context)
 
 
 
 class ProductsListView(ListView):
     model=Product
-    template_name = 'product.html'
+    template_name = 'all/product.html'
     context_object_name = 'product'
     success_url ='/'
 
@@ -119,7 +119,7 @@ class ProductsListView(ListView):
 
 class ProductView(ListView):
     model=Product
-    template_name = 'product_view.html'
+    template_name = 'all/product_view.html'
     context_object_name = 'product'
     success_url ='/'
 
@@ -142,14 +142,14 @@ def about(request):
         newsletter = Newsletter(
             email=email,
         )
-        print(email)
+        # print(email)
         newsletter.save()
 
     farmersdisplay = Farmer.objects.all()
     aboutdisplay = AboutUs.objects.all()
     factdisplay = Fact.objects.all()
     context = {"Farmer":farmersdisplay, 'AboutUs': aboutdisplay, 'Fact':factdisplay}
-    return render(request, 'about.html', context)
+    return render(request, 'all/about.html', context)
 
 
 def blog(request):
@@ -159,14 +159,14 @@ def blog(request):
         newsletter = Newsletter(
             email=email,
         )
-        print(email)
+        # print(email)
         newsletter.save()
 
     postsdisplay = Post.objects.all()
     categorydisplay = Category.objects.all()
     aboutdisplay = AboutUs.objects.all()
     context = {"Post":postsdisplay, "Category":categorydisplay, 'AboutUs': aboutdisplay}
-    return render(request, 'blog.html', context)
+    return render(request, 'all/blog.html', context)
 
 
 def feature(request):
@@ -183,7 +183,7 @@ def feature(request):
     aboutdisplay = AboutUs.objects.all()
     featuredisplay = Feature.objects.all()
     context = {"Service":servicedisplay, 'AboutUs': aboutdisplay, "Feature":featuredisplay}
-    return render(request, 'feature.html', context)
+    return render(request, 'all/feature.html', context)
 
 
 def detail(request):
@@ -201,7 +201,7 @@ def detail(request):
     customersdisplay = Customer.objects.all()
     aboutdisplay = AboutUs.objects.all()
     context = {"Customer":customersdisplay, "Post":postsdisplay, "Category":categorydisplay, 'AboutUs': aboutdisplay}
-    return render(request, 'detail.html', context)
+    return render(request, 'all/detail.html', context)
 
 
 def service(request):
@@ -218,7 +218,7 @@ def service(request):
     servicedisplay = Service.objects.all()
     aboutdisplay = AboutUs.objects.all()
     context = {"Customer":customersdisplay, "Service":servicedisplay, 'AboutUs': aboutdisplay}
-    return render(request, 'service.html', context)
+    return render(request, 'all/service.html', context)
 
 
 def team(request):
@@ -234,7 +234,7 @@ def team(request):
     farmersdisplay = Farmer.objects.all()
     aboutdisplay = AboutUs.objects.all()
     context = {"Farmer":farmersdisplay, 'AboutUs': aboutdisplay}
-    return render(request, 'team.html', context)
+    return render(request, 'all/team.html', context)
 
 
 def testimonial(request):
@@ -250,5 +250,5 @@ def testimonial(request):
     customersdisplay = Customer.objects.all()
     aboutdisplay = AboutUs.objects.all()
     context = {"Customer":customersdisplay, 'AboutUs': aboutdisplay}
-    return render(request, 'testimonial.html', context)
+    return render(request, 'all/testimonial.html', context)
 
