@@ -1284,7 +1284,7 @@ msgstr "Sahifa"
 
 #: templates/all/blog.html:103 templates/all/detail.html:53
 msgid "Categories"
-msgstr ""
+msgstr "Kategoriyalar"
 
 #: templates/all/blog.html:118 templates/all/detail.html:64
 msgid "Recent Post"
