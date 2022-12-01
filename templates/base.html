@@ -41,7 +41,9 @@
                 <div class="d-flex align-items-center justify-content-start">
                     <i class="bi bi-phone-vibrate fs-1 text-primary me-2"></i>
                     {% for item in AboutUs %}
+                    {% if item.id == 1%}
                     <h2 class="mb-0">{{item.phone_number}}</h2>
+                    {%endif%}
                     {%endfor%}
                 </div>
             </div>
