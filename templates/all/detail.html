@@ -76,7 +76,11 @@
 
                 <!-- Image Start -->
                 <div class="mb-5">
-                    <img src="{% static 'img/blog-1.jpg' %}" alt="" class="img-fluid rounded">
+                    {% for post in Post %}
+                    {% if post.id < 3 %}
+                    <img src="{{post.image.url}}" alt="" class="img-fluid rounded"><br><br>
+                    {%endif%}
+                    {%endfor%}
                 </div>
                 <!-- Image End -->
             </div>
