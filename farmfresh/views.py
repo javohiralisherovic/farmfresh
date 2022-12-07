@@ -147,7 +147,8 @@ def about(request):
     farmersdisplay = Farmer.objects.all()
     aboutdisplay = AboutUs.objects.all()
     factdisplay = Fact.objects.all()
-    context = {"Farmer":farmersdisplay, 'AboutUs': aboutdisplay, 'Fact':factdisplay}
+    featuredisplay = Feature.objects.all()
+    context = {"Farmer":farmersdisplay, 'AboutUs': aboutdisplay, 'Fact':factdisplay, 'Feature':featuredisplay}
     return render(request, 'all/about.html', context)
 
 
